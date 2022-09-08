@@ -1,0 +1,33 @@
+.card {
+    margin: 0 auto;
+
+    &__alert {
+        background-color: rgba(0, 128, 0, 0.669);
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Fraunces", serif;
+        }
+
+        &-field {
+            width: 100%;
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.margin,
+mat-card {
+    margin-top: 5rem;
+}
