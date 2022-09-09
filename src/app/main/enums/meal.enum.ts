@@ -2,7 +2,7 @@ export enum Meal {
     BREAKFAST = 'BREAKFAST',
     LUNCH = 'LUNCH',
     DINNER = 'DINNER',
-    DESSERTS = 'DINNER',
-    DRIINKS = 'DRINKS',
+    DESSERTS = 'DESSERTS',
+    DRINKS = 'DRINKS',
     SUPPER = 'SUPPER'
 }

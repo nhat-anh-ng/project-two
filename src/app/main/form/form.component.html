@@ -3,74 +3,52 @@
     <button mat-button mat-dialog-close>Cancel</button>
 
 
-<form class="card__form" [formGroup]="recipeForm">
+<form class="card__form" [formGroup]="recipeForm" >
     <h1 class="card__form-title">Add a recipe</h1>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">
-            <mat-label>Name</mat-label>
-            <input type="text" formControlName="name" placeholder="Ex. Name" matInput required>
+            <mat-label>Title</mat-label>
+            <input type="text" formControlName="title" placeholder="Ex. Title" matInput required>
             <mat-error>
-                Name is required
+                Title is required
             </mat-error>
         </mat-form-field>
     </div>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">
-            <mat-label>Address</mat-label>
-            <input type="text" formControlName="address" placeholder="Ex. Road 123" matInput required>
+            <mat-label>Ingredients</mat-label>
+            <textarea formControlName="ingredients" placeholder="Ex. 1 tomato, 2 eggs" matInput required></textarea>
             <mat-error>
-                Address is required
+                Ingredients are required
             </mat-error>
         </mat-form-field>
     </div>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">
-            <mat-label>Image url</mat-label>
-            <input type="text" formControlName="img" placeholder="https://cdn.pixabay.com/photo" matInput>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field class="card__form-field" appearance="fill">
-            <mat-label>Phone number</mat-label>
-            <input type="number" formControlName="phone" placeholder="Ex. 123123123" matInput required>
-            <mat-error >
-                Phone number with 5 or more digits is required
-            </mat-error>
-            <mat-error >Phone number is required
-            </mat-error>
-        </mat-form-field>
-
-    </div>
-    <div>
-        <mat-form-field class="card__form-field" appearance="fill">
-            <mat-label>Email</mat-label>
-            <input type="email" formControlName="email" placeholder="Ex. email@example.com" matInput required>
+            <mat-label>Preparation</mat-label>
+            <textarea formControlName="preparation" placeholder="Ex. Prepare" matInput required></textarea>
             <mat-error>
-                Please enter a valid email address
-            </mat-error>
-            <mat-error >
-                Email is required
+                Preparation is required
             </mat-error>
         </mat-form-field>
     </div>
+    
     <div>
         <mat-form-field appearance="fill">
-            <mat-label>Select a sector</mat-label>
-            <mat-select disableRipple formControlName="sector">
-                <mat-option value="public">Breakfast</mat-option>
-                <mat-option value="private">Lunch</mat-option>
-                <mat-option value="private">Dinner</mat-option>
-                <mat-option value="private">Drinks</mat-option>
-                <mat-option value="private">Desserts</mat-option>
+            <mat-label>Select a meal type</mat-label>
+            <mat-select disableRipple formControlName="meal" >
+                <mat-option *ngFor="let mealType of mealTypes" value="meal">
+                    {{mealType}}
+                </mat-option>
             </mat-select>
             <mat-error>
-                Sector is required
+                Meal type is required
             </mat-error>
         </mat-form-field>
     </div>
-</form>
 
-<mat-dialog-actions>
-    <button mat-button color="warn">Delete</button>
-    <button mat-raised-button color="accent">Save</button>
-</mat-dialog-actions>
+    <mat-dialog-actions>
+        <button mat-button color="warn">Delete</button>
+        <button type="submit" [disabled]="recipeForm.invalid" mat-raised-button color="accent" (ngSubmit)="saveRecipe()">Save</button>
+    </mat-dialog-actions>
+</form>

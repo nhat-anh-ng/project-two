@@ -14,7 +14,7 @@
             <mat-divider></mat-divider>
             <mat-list-option><mat-icon mat-list-icon> local_drink</mat-icon><p mat-line>Drinks</p></mat-list-option>
         </mat-selection-list>
-    <button mat-raised-button color="accent">+ Add recipe </button>
+    <button mat-raised-button color="accent" (click)="openDialog()">+ Add recipe </button>
     </mat-drawer>
     <mat-drawer-content>
         <ng-container *ngIf="(appState$ | async) as result" [ngSwitch]="result.dataState">

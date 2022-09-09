@@ -1,10 +1,10 @@
 import { Meal } from "../enums/meal.enum";
 
 export interface Recipe {
-    id: number;
-    title: string;
-    ingredients: string;
-    preparation: string;
-    meal: Meal;
-    img?: string;
+    id?: number | undefined | null;
+    title?: string | undefined | null;
+    ingredients?: string | undefined | null;
+    preparation?: string | undefined | null;
+    meal?: Meal | undefined | null;
+    img?: string | undefined | null;
 }
