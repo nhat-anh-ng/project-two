@@ -1,0 +1,32 @@
+<ng-container *ngIf="(appState$ | async) as result" [ngSwitch]="result.dataState">
+    <ng-container *ngSwitchCase="DataState.LOADING">
+        <mat-spinner value="75" mode="indeterminate"></mat-spinner>
+    </ng-container>
+    <ng-container *ngSwitchCase="DataState.ERROR">
+        <div>
+            {{ result.error}}
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="DataState.LOADED">
+        <mat-card class="example-card" *ngFor="let recipe of result?.data">
+            <mat-card-title-group>
+                <mat-card-title>{{ recipe.title}}</mat-card-title>
+                <mat-card-subtitle>{{ recipe.meal}}
+                </mat-card-subtitle>
+                <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
+                <img mat-card-md-image [src]="recipe.img">
+            </mat-card-title-group>
+            <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
+            <mat-card-content>
+                <p>{{ recipe.preparation}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="openDialog()">EDIT</button>
+                <button mat-button>DELETE</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+    <div>
+        {{ appState$ | async | json}}
+    </div>
+</ng-container>

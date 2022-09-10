@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap, throwError } from 'rxjs';
+import { CustomHttpResponse } from '../interfaces/custom-http-response';
 import { Recipe } from '../interfaces/recipe';
 
 @Injectable({
@@ -18,7 +19,7 @@ export class RecipeService {
         catchError(this.handleError)
       );
 
-  save$ = (recipe: Recipe) => <Observable<Recipe[]>>this.http.post<Recipe[]>
+  save$ = (recipe: Recipe) => <Observable<CustomHttpResponse>>this.http.post<CustomHttpResponse>
     (`${this.server}/add`, recipe)
       .pipe(
         tap(console.log),
@@ -48,5 +49,5 @@ export class RecipeService {
       errorMessage = `An error has occured - Code:${error.status}`
     }
     return throwError(errorMessage)
-  }
+  } 
 }
