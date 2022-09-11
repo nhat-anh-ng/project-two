@@ -3,7 +3,7 @@
     <button mat-button mat-dialog-close>Cancel</button>
 
 
-<form class="card__form" [formGroup]="recipeForm" >
+<form class="card__form" [formGroup]="recipeForm" (ngSubmit)="saveRecipe()">
     <h1 class="card__form-title">Add a recipe</h1>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">
@@ -37,7 +37,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Select a meal type</mat-label>
             <mat-select disableRipple formControlName="meal" >
-                <mat-option *ngFor="let mealType of mealTypes" value="meal">
+                <mat-option *ngFor="let mealType of mealTypes" value={{mealType}}>
                     {{mealType}}
                 </mat-option>
             </mat-select>
@@ -49,6 +49,6 @@
 
     <mat-dialog-actions>
         <button mat-button color="warn">Delete</button>
-        <button type="submit" [disabled]="recipeForm.invalid" mat-raised-button color="accent" (ngSubmit)="saveRecipe()">Save</button>
+        <button type="submit" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Save</button>
     </mat-dialog-actions>
 </form>

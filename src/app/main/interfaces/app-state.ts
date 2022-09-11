@@ -3,7 +3,7 @@ import { Recipe } from "./recipe";
 
 export interface AppState<T> {
     dataState: DataState;
-    data?: T | Recipe[];
+    data?: T | null | undefined;
     error?: string;
 }
 

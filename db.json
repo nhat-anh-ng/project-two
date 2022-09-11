@@ -16,13 +16,19 @@
       "meal": "LUNCH",
       "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg"
     },
-     {
-      "id": 3,
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "preparation": "abcdefg",
-      "meal": "DINNER",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg"
+    {
+      "title": "test",
+      "ingredients": "test",
+      "preparation": "test",
+      "meal": "BREAKFAST",
+      "id": 3
+    },
+    {
+      "title": "test",
+      "ingredients": "test",
+      "preparation": "tst",
+      "meal": "BREAKFAST",
+      "id": 4
     }
   ]
 }

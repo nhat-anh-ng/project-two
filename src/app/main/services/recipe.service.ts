@@ -12,35 +12,42 @@ export class RecipeService {
   recipes: Recipe[] = [];
   constructor(private http: HttpClient) { }
 
-  recipes$ = <Observable<Recipe[]>>this.http.get<Recipe[]>
+  getRecipes$ = <Observable<Recipe[]>>this.http.get<Recipe[]>
     (`${this.server}`)
       .pipe(
         tap(console.log),
         catchError(this.handleError)
-      );
+  );
 
-  save$ = (recipe: Recipe) => <Observable<CustomHttpResponse>>this.http.post<CustomHttpResponse>
-    (`${this.server}/add`, recipe)
+  getRecipe$ = (id: string) => <Observable<Recipe>>this.http.get<Recipe>
+    (`${this.server}/${id}`)
+        .pipe(
+          tap(console.log),
+          catchError(this.handleError)
+        )
+
+  post$ = (recipe: Recipe) => <Observable<Recipe>>this.http.post<Recipe>
+    (`${this.server}`, recipe)
       .pipe(
         tap(console.log),
         catchError(this.handleError)
       );
 
-  update$ = (recipe: Recipe) => <Observable<Recipe[]>>this.http.put<Recipe[]>
-      (`${this.server}/update/`, recipe)
+  update$ = (recipe: Recipe, id: number) => <Observable<Recipe>>this.http.put<Recipe>
+      (`${this.server}/update/${id}`, recipe)
         .pipe(
           tap(console.log),
           catchError(this.handleError)
         )
 
-  delete$ = (recipeId: number) => <Observable<Recipe[]>>this.http.delete<Recipe[]>
-      (`${this.server}/delete/${recipeId}`)
+  delete$ = (id: number) => <Observable<Recipe>>this.http.delete<Recipe>
+      (`${this.server}/delete/${id}`)
         .pipe(
           tap(console.log),
           catchError(this.handleError)
         )
 
-  private handleError(error: HttpErrorResponse): Observable<never> {
+  handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage: string;
     console.log(error);
     if (error.error instanceof ErrorEvent) {

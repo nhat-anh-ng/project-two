@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
-import { DataState } from '../../enums/data-state.enum';
-import { Meal } from 'src/app/main/enums/meal.enum';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BehaviorSubject,Observable } from 'rxjs';
 
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppState } from '../../interfaces/app-state';
-import { Recipe } from '../../interfaces/recipe';
-import { RecipeService } from '../../services/recipe.service';
 import { CustomHttpResponse } from '../../interfaces/custom-http-response';
+import { DataState } from '../../enums/data-state.enum';
+import { Recipe } from '../../interfaces/recipe';
+import { Meal } from '../../enums/meal.enum';
+import { RecipeService } from '../../services/recipe.service';
 
 @Component({
   selector: 'app-form',
@@ -15,14 +16,8 @@ import { CustomHttpResponse } from '../../interfaces/custom-http-response';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  
-  appState$: Observable<AppState<CustomHttpResponse>> | undefined;
-  readonly DataState = DataState;
-  private dataSubject = new BehaviorSubject<CustomHttpResponse | undefined>(undefined);
   readonly Meal = Meal;
   public mealTypes = Object.values(Meal).map(item => String(item));
-  response!: CustomHttpResponse
-  
   
   recipeForm = new FormGroup({
     title: new FormControl('', [Validators.required] ),
@@ -32,27 +27,37 @@ export class FormComponent implements OnInit {
   })
 
   get f() { return this.recipeForm.controls; }
-  constructor(private recipeService: RecipeService) { }
+
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public cardData: Recipe,
+    private recipeService: RecipeService, ) { }
+
   ngOnInit(): void {}
   
   saveRecipe(): void {
-    /** 
-    if(this.recipeForm.valid) {
-      this.recipeService.save$(this.recipeForm.value).subscribe(res => {
-        this.recipeForm.reset();
-      })
-    } */
-    this.appState$ = this.recipeService.save$(this.recipeForm.value)
-      .pipe(
-        map(response => {
-          this.dataSubject.next(<CustomHttpResponse>{...this.dataSubject.value, recipes: [response.recipes![0]], ...this.dataSubject!.value!.recipes});
-          this.recipeForm.reset();
-          return { dataState: DataState.LOADED, data: this.dataSubject.value }
-        }),
-        startWith({ dataState: DataState.LOADED, data:this.dataSubject.value }),
-        catchError((error: string) => {
-          return of({ dataState: DataState.ERROR, error})
+    if (this.recipeForm.valid) {
+      this.recipeService.post$(this.recipeForm.value).subscribe({
+          next:() => {
+            this.recipeForm.clearAsyncValidators();
+            window.location.reload();
+          },
+          error: error => {
+            this.recipeService.handleError(error)
+          }
         })
-      )
+    }
+  }
+
+  updateRecipe(): void {
+    
+  }
+
+  dataForm(): void {
+    if(this.cardData) {
+     this.recipeForm.controls['title'].setValue(this.cardData.title!);
+     this.recipeForm.controls['ingredients'].setValue(this.cardData.ingredients!);
+     this.recipeForm.controls['preparation'].setValue(this.cardData.preparation!);
+     this.recipeForm.controls['meal'].setValue(this.cardData.meal!);
+    }
   }
 }

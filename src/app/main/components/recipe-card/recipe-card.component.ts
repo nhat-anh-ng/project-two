@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, of, startWith, Subscription } from 'rxjs';
 import { DataState } from '../../enums/data-state.enum';
 import { AppState } from '../../interfaces/app-state';
 import { Recipe } from '../../interfaces/recipe';
@@ -13,13 +13,18 @@ import { FormComponent } from '../form/form.component';
   styleUrls: ['./recipe-card.component.scss']
 })
 export class RecipeCardComponent implements OnInit {
+
   appState$!: Observable<AppState<Recipe[]>>;
   readonly DataState = DataState;
   private dataSubject = new BehaviorSubject<Recipe[] | undefined>(undefined);
-  constructor(private recipeService: RecipeService, public dialog: MatDialog) { }
+  constructor(private recipeService: RecipeService, public dialog: MatDialog,) { }
 
   ngOnInit(): void {
-    this.appState$ = this.recipeService.recipes$
+    this.loadData()
+  }
+
+  loadData() {
+    this.appState$ = this.recipeService.getRecipes$
         .pipe(
             map(response => {
               this.dataSubject.next(response);
@@ -39,5 +44,4 @@ export class RecipeCardComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-
 }
