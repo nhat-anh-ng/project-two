@@ -1,12 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { BehaviorSubject,Observable } from 'rxjs';
-
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { AppState } from '../../interfaces/app-state';
-import { CustomHttpResponse } from '../../interfaces/custom-http-response';
-import { DataState } from '../../enums/data-state.enum';
-import { Recipe } from '../../interfaces/recipe';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Recipe } from '../../interfaces/recipe.model';
 import { Meal } from '../../enums/meal.enum';
 import { RecipeService } from '../../services/recipe.service';
 
@@ -16,48 +10,39 @@ import { RecipeService } from '../../services/recipe.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  readonly Meal = Meal;
   public mealTypes = Object.values(Meal).map(item => String(item));
-  
-  recipeForm = new FormGroup({
+  recipeForm!: FormGroup;
+  recipeObj: Recipe = new Recipe();
+  get f() { return this.recipeForm.controls; }
+
+  constructor(private recipeService: RecipeService,private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.recipeForm = this.formBuilder.group({
+    id: new FormControl(null),
     title: new FormControl('', [Validators.required] ),
     ingredients: new FormControl('', [Validators.required]),
     preparation: new FormControl('', [Validators.required]),
+    img: new FormControl('' ),
     meal: new FormControl(Meal, [Validators.required]),
   })
+}
 
-  get f() { return this.recipeForm.controls; }
-
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public cardData: Recipe,
-    private recipeService: RecipeService, ) { }
-
-  ngOnInit(): void {}
   
   saveRecipe(): void {
-    if (this.recipeForm.valid) {
-      this.recipeService.post$(this.recipeForm.value).subscribe({
-          next:() => {
-            this.recipeForm.clearAsyncValidators();
+    this.recipeObj.title = this.recipeForm.value.title;
+    this.recipeObj.ingredients = this.recipeForm.value.ingredients;
+    this.recipeObj.preparation = this.recipeForm.value.preparation;
+    this.recipeObj.img = this.recipeForm.value.img;
+    this.recipeObj.meal = this.recipeForm.value.meal;
+    
+      this.recipeService.post(this.recipeObj).subscribe(res => {
+            this.recipeForm.reset();
             window.location.reload();
           },
-          error: error => {
-            this.recipeService.handleError(error)
+          error => {
+            this.recipeService.handleError(error);
           }
-        })
-    }
-  }
-
-  updateRecipe(): void {
-    
-  }
-
-  dataForm(): void {
-    if(this.cardData) {
-     this.recipeForm.controls['title'].setValue(this.cardData.title!);
-     this.recipeForm.controls['ingredients'].setValue(this.cardData.ingredients!);
-     this.recipeForm.controls['preparation'].setValue(this.cardData.preparation!);
-     this.recipeForm.controls['meal'].setValue(this.cardData.meal!);
-    }
+      )
   }
 }

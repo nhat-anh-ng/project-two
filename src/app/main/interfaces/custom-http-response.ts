@@ -1,4 +1,4 @@
-import { Recipe } from "./recipe";
+import { Recipe } from "./recipe.model";
 
 export interface CustomHttpResponse {
     recipes: Recipe[] | null | undefined;

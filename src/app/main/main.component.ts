@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
 
 import { AppState } from './interfaces/app-state';
-import { Recipe } from './interfaces/recipe';
+import { Recipe } from './interfaces/recipe.model';
 import { RecipeService } from './services/recipe.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Meal } from './enums/meal.enum';
 import { NgForm } from '@angular/forms';
 import { DataState } from './enums/data-state.enum';
 import { FormComponent } from './components/form/form.component';
+
 
 @Component({
   selector: 'app-main',

@@ -18,6 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormComponent } from "./components/form/form.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { RecipeCardComponent } from "./components/recipe-card/recipe-card.component";
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 
 
@@ -41,7 +43,8 @@ import { RecipeCardComponent } from "./components/recipe-card/recipe-card.compon
     MatSelectModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule
   ]
 })
 export class MainModule { }
