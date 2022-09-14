@@ -29,4 +29,10 @@ export class MainComponent implements OnInit {
     });
   }
 
+  message!:string;
+
+  receiveMessage($event: any) {
+    this.message = $event
+  }
+
 }

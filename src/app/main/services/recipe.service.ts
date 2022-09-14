@@ -1,12 +1,14 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { catchError, map, Observable, Subscriber, throwError } from 'rxjs';
+import { Meal } from '../enums/meal.enum';
 import { Recipe } from '../interfaces/recipe.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
+  recipe!: Recipe[];
   private readonly server = 'http://localhost:3000/recipes';
 
   constructor(private http: HttpClient) { }
@@ -46,6 +48,16 @@ export class RecipeService {
       catchError(this.handleError)
     )
   }
+
+  filter$ = (meal:Meal, data: Recipe[]) => <Observable<Recipe[]>>
+  new Observable<Recipe[]>(subscriber => {
+    subscriber.next(meal === Meal.ALL ? data :
+      <Recipe[]>{
+        ...data,
+        recipe: data.filter(recipe => recipe.meal === meal)
+      });
+      subscriber.complete();
+  })
 
 
   handleError(error: HttpErrorResponse): Observable<never> {

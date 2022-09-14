@@ -6,7 +6,7 @@
         <button mat-raised-button color="accent" (click)="openDialog()">+ Add recipe </button>
     </mat-drawer>
     <mat-drawer-content>
-        <app-recipe-card></app-recipe-card>
+        <app-recipe-card (messageEvent)="receiveMessage($event)"></app-recipe-card>
     </mat-drawer-content>
 </mat-drawer-container>
 

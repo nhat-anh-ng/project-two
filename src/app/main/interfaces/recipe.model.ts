@@ -5,6 +5,6 @@ export class Recipe {
     title?: string | undefined | null;
     ingredients?: string | undefined | null;
     preparation?: string | undefined | null;
-    meal?: typeof Meal | undefined | null;
+    meal?: Meal | undefined | null;
     img?: string | undefined | null;
 }
