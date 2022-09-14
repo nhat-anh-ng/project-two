@@ -1,38 +1,5 @@
-<ng-container *ngIf="(appState$ | async) as result" [ngSwitch]="result.dataState">
-    <ng-container *ngSwitchCase="DataState.LOADING">
-        <mat-spinner value="75" mode="indeterminate"></mat-spinner>
-    </ng-container>
-    <ng-container *ngSwitchCase="DataState.ERROR">
-        <div>
-            {{ result.error}}
-        </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="DataState.LOADED">
-        <mat-card class="example-card" *ngFor="let recipe of recipes">
-            <mat-card-title-group>
-                
-                <mat-card-title>{{ recipe.title}}</mat-card-title>
-                <mat-card-subtitle>{{ recipe.meal}}
-                </mat-card-subtitle>
-                <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
-                <img mat-card-md-image [src]="recipe.img">
-            </mat-card-title-group>
-            <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
-            <mat-card-content>
-                <p>{{ recipe.preparation}}</p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button >EDIT</button>
-                <button mat-button >DELETE</button>
-            </mat-card-actions>
-        </mat-card>
-    </ng-container>
-
-    <div>
-        {{ appState$ | async | json}}
-    </div>
-</ng-container>
-<mat-card class="example-card" *ngFor="let recipe of recipes">
+<div *ngIf="recipes$ | async as recipe ; else loading">
+<mat-card class="example-card" *ngFor="let recipe of recipes$ | async" >
     <mat-card-title-group>
         <mat-card-title  >{{ recipe.title}}</mat-card-title>
         <mat-card-subtitle>{{ recipe.meal}}
@@ -45,23 +12,18 @@
         <p>{{ recipe.preparation}}</p>
     </mat-card-content>
     <mat-card-actions>
-            <mat-accordion>
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        
-                            <button (click)="editRecipe(recipe)" mat-button><mat-panel-title>EDIT</mat-panel-title></button>
-                        
-                    </mat-expansion-panel-header>
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <button (click)="editRecipe(recipe)" mat-button><mat-panel-title>EDIT</mat-panel-title></button>
+                </mat-expansion-panel-header>
                     <form class="card__form" [formGroup]="recipeForm">
-                        <h1 class="card__form-title">Add a recipe</h1>
                         <div>
                             <mat-form-field class="card__form-field" appearance="fill">
                                 <mat-label>Title</mat-label>
                                 <input type="hidden" formControlName="id">
                                 <input type="text" formControlName="title" placeholder="Ex. Title" matInput required>
-                                <mat-error>
-                                    Title is required
-                                </mat-error>
+                                <mat-error>Title is required</mat-error>
                             </mat-form-field>
                         </div>
                         <div>
@@ -74,21 +36,16 @@
                             <mat-form-field class="card__form-field" appearance="fill">
                                 <mat-label>Ingredients</mat-label>
                                 <textarea formControlName="ingredients" placeholder="Ex. 1 tomato, 2 eggs" matInput required></textarea>
-                                <mat-error>
-                                    Ingredients are required
-                                </mat-error>
+                                <mat-error>Ingredients are required</mat-error>
                             </mat-form-field>
                         </div>
                         <div>
                             <mat-form-field class="card__form-field" appearance="fill">
                                 <mat-label>Preparation</mat-label>
                                 <textarea formControlName="preparation" placeholder="Ex. Prepare" matInput required></textarea>
-                                <mat-error>
-                                    Preparation is required
-                                </mat-error>
+                                <mat-error>Preparation is required</mat-error>
                             </mat-form-field>
                         </div>
-                    
                         <div>
                             <mat-form-field appearance="fill">
                                 <mat-label>Select a meal type</mat-label>
@@ -97,18 +54,21 @@
                                         {{mealType}}
                                     </mat-option>
                                 </mat-select>
-                                <mat-error>
-                                    Meal type is required
-                                </mat-error>
+                                <mat-error>Meal type is required</mat-error>
                             </mat-form-field>
                         </div>
-                    
                         <mat-dialog-actions>
                             <button type="button" (click)="updateRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Update</button>
                         </mat-dialog-actions>
                     </form>
-                </mat-expansion-panel>
-            </mat-accordion>
+            </mat-expansion-panel>
+        </mat-accordion>
         <button (click)="deleteRecipe(recipe)" mat-button>DELETE</button>
     </mat-card-actions>
 </mat-card>
+</div>
+
+<ng-template #loading>
+    <mat-spinner mode="indeterminate"></mat-spinner>
+    LOADING...
+</ng-template>

@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Recipe } from '../../interfaces/recipe.model';
 import { Meal } from '../../enums/meal.enum';
 import { RecipeService } from '../../services/recipe.service';
+import { Observable } from 'rxjs';
+import { RecipeCardComponent } from '../recipe-card/recipe-card.component';
 
 @Component({
   selector: 'app-form',
@@ -13,6 +15,7 @@ export class FormComponent implements OnInit {
   public mealTypes = Object.values(Meal).map(item => String(item));
   recipeForm!: FormGroup;
   recipeObj: Recipe = new Recipe();
+  
   get f() { return this.recipeForm.controls; }
 
   constructor(private recipeService: RecipeService,private formBuilder: FormBuilder) { }
@@ -25,9 +28,8 @@ export class FormComponent implements OnInit {
     preparation: new FormControl('', [Validators.required]),
     img: new FormControl('' ),
     meal: new FormControl(Meal, [Validators.required]),
-  })
-}
-
+    })
+  }
   
   saveRecipe(): void {
     this.recipeObj.title = this.recipeForm.value.title;

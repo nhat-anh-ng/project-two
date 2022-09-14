@@ -1,13 +1,13 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { DataState } from '../../enums/data-state.enum';
 import { Meal } from '../../enums/meal.enum';
 import { AppState } from '../../interfaces/app-state';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
+import { FormComponent } from '../form/form.component';
 
 @Component({
   selector: 'app-recipe-card',
@@ -15,15 +15,10 @@ import { RecipeService } from '../../services/recipe.service';
   styleUrls: ['./recipe-card.component.scss']
 })
 export class RecipeCardComponent implements OnInit {
-
-  appState$!: Observable<AppState<Recipe[]>>;
-  readonly DataState = DataState;
-
-  recipes!: Recipe[];
+  recipes$!: Observable<Recipe[]>;
   recipeForm!: FormGroup;
   public mealTypes = Object.values(Meal).map(item => String(item));
   recipeObj: Recipe = new Recipe();
-  editForm: FormGroup = new FormGroup({});
   
   constructor(private recipeService: RecipeService, public dialog: MatDialog, private formBuilder: FormBuilder, ) { }
 
@@ -36,17 +31,12 @@ export class RecipeCardComponent implements OnInit {
     preparation: new FormControl('', [Validators.required]),
     meal: new FormControl(Meal, [Validators.required]),
   })
-    this.loadData();
+    this.recipes$ = this.recipeService.get();
   }
-
-  loadData(){
-  this.recipeService.get().subscribe(res => {
-    this.recipes = res;
-  })}
 
   deleteRecipe(recipe: Recipe) {
     this.recipeService.delete(recipe.id!).subscribe(res => {
-      this.loadData();
+      this.recipes$ = this.recipeService.get();
     })
   }
 
@@ -66,7 +56,7 @@ export class RecipeCardComponent implements OnInit {
     this.recipeObj.preparation = this.recipeForm.value.preparation;
     this.recipeObj.meal = this.recipeForm.value.meal;
     this.recipeService.update(this.recipeObj, this.recipeObj.id!).subscribe(res => {
-            window.location.reload();
+            this.recipes$ = this.recipeService.get();
           },
           error => {
             this.recipeService.handleError(error);
@@ -74,20 +64,3 @@ export class RecipeCardComponent implements OnInit {
       )
   }
 }
-
-
-/*
-  loadData() {
-    this.appState$ = this.recipeService.getRecipes$
-        .pipe(
-            map(response => {
-              this.dataSubject.next(response);
-                return { dataState: DataState.LOADED, data: response}
-            }),
-            startWith({ dataState: DataState.LOADING }),
-            catchError((error: string) => {
-                return of({ dataState: DataState.ERROR, error: error})
-            })
-        )
-  }
-*/
