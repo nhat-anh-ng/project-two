@@ -1,7 +1,6 @@
 <div mat-subheader>FoodApp</div>
 <div *ngFor="let recipe of mealTypes" >
-
-<mat-list-option (click)="filterByMeal(meal)" [class.active]="(filteredMeal$ | async) === recipe">
+<mat-list-option>
     <mat-icon mat-list-icon> circle</mat-icon>
     <p mat-line>{{recipe}}</p>
 </mat-list-option>

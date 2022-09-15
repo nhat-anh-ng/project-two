@@ -15,14 +15,6 @@
       "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
       "preparation": "abcdefg",
       "meal": "LUNCH"
-    },
-    {
-      "title": "hi",
-      "ingredients": "test",
-      "preparation": "test",
-      "img": "",
-      "meal": "BREAKFAST",
-      "id": "skFYkKQ"
     }
   ]
 }

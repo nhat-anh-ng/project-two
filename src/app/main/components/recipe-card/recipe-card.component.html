@@ -1,22 +1,30 @@
-<div *ngIf="recipes$ | async as recipe ; else loading"> 
-<mat-card class="example-card" *ngFor="let recipe of recipes$ | async" >
-    <mat-card-title-group>
+<form class="form">
+    <mat-form-field class="form__field" appearance="fill">
+        <mat-label>What's in your fridge? Ex. tomatoes </mat-label>
+        <input type="text" [formControl]="filter" matInput >
+    </mat-form-field>
+</form>
+<div *ngIf="recipes$ | async as recipe; else loading" class="recipes" > 
+<mat-card class="recipes__card" *ngFor="let recipe of filteredRecipe$ | async" >
+    <mat-card-title-group >
         <mat-card-title  >{{ recipe.title}}</mat-card-title>
         <mat-card-subtitle>{{ recipe.meal}}
         </mat-card-subtitle>
         <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
         <img mat-card-md-image [src]="recipe.img">
     </mat-card-title-group>
-    <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
+    
     <mat-card-content>
-        <p>{{ recipe.preparation}}</p>
+        <h2>Preparation</h2>
+        <p>Preparation: {{ recipe.preparation}}</p>
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions class="recipes__card-actions">
         <mat-accordion>
             <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                    <button (click)="editRecipe(recipe)" mat-button><mat-panel-title>EDIT</mat-panel-title></button>
+                <mat-expansion-panel-header  (click)="editRecipe(recipe)" >
+                    <div class="button"><p>EDIT</div>
                 </mat-expansion-panel-header>
+                
                     <form class="card__form" [formGroup]="recipeForm">
                         <div>
                             <mat-form-field class="card__form-field" appearance="fill">
@@ -47,7 +55,7 @@
                             </mat-form-field>
                         </div>
                         <div>
-                            <mat-form-field appearance="fill">
+                            <mat-form-field class="card__form-field"  appearance="fill">
                                 <mat-label>Select a meal type</mat-label>
                                 <mat-select disableRipple formControlName="meal">
                                     <mat-option *ngFor="let mealType of mealTypes" value={{mealType}}>
@@ -57,14 +65,16 @@
                                 <mat-error>Meal type is required</mat-error>
                             </mat-form-field>
                         </div>
-                        <mat-dialog-actions>
-                            <button type="button" (click)="updateRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Update</button>
+                        <mat-dialog-actions class="button">
+                            <button  type="button" (click)="updateRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Update</button>
                         </mat-dialog-actions>
                     </form>
             </mat-expansion-panel>
         </mat-accordion>
-        <button (click)="deleteRecipe(recipe)" mat-button>DELETE</button>
     </mat-card-actions>
+    <div class="btn">
+        <button mat-stroked-button class="button" (click)="deleteRecipe(recipe)" mat-button>DELETE </button>
+    </div>
 </mat-card>
 </div>
 

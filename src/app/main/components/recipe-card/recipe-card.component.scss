@@ -1,3 +1,31 @@
-.example-card {
-    max-width: 400px;
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 1rem;
+    
+    
+}
+
+    .button{
+        display: table;
+        margin: 0 auto;
+    }
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 1rem 1rem;
+}
+
+.card__form-field{
+    width: 100%;
+}
+.center{
+    display: flex;
+        justify-content: center;
+        p{
+            margin: 0;
+        }
 }
