@@ -3,8 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Recipe } from '../../interfaces/recipe.model';
 import { Meal } from '../../enums/meal.enum';
 import { RecipeService } from '../../services/recipe.service';
-import { Observable } from 'rxjs';
-import { RecipeCardComponent } from '../recipe-card/recipe-card.component';
 
 @Component({
   selector: 'app-form',

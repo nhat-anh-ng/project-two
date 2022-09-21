@@ -9,6 +9,7 @@ import { Meal } from './enums/meal.enum';
 import { NgForm } from '@angular/forms';
 import { DataState } from './enums/data-state.enum';
 import { FormComponent } from './components/form/form.component';
+import { RecipesStore } from './services/recipes.store';
 
 
 @Component({
@@ -17,7 +18,8 @@ import { FormComponent } from './components/form/form.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  constructor(public dialog: MatDialog) { }
+  breakfastRecipes$!: Observable<Recipe[]>;
+  constructor(public dialog: MatDialog, private recipesStore: RecipesStore) { }
 
   ngOnInit(): void {}
 
@@ -33,6 +35,10 @@ export class MainComponent implements OnInit {
 
   receiveMessage($event: any) {
     this.message = $event
+  }
+
+  reloadRecipes() {
+    this.breakfastRecipes$ = this.recipesStore.filterByMeal("BREAKFAST");
   }
 
 }

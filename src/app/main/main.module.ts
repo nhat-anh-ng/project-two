@@ -17,9 +17,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormComponent } from "./components/form/form.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
-import { RecipeCardComponent } from "./components/recipe-card/recipe-card.component";
+
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { RecipeCardListComponent } from "./components/recipe-card-list/recipe-card-list.component";
 
 
 
@@ -28,7 +29,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
-  declarations: [MainComponent, FormComponent, SidebarComponent, RecipeCardComponent],
+  declarations: [MainComponent, FormComponent, SidebarComponent, RecipeCardListComponent],
   imports: [
     CommonModule,
     HttpClientModule,

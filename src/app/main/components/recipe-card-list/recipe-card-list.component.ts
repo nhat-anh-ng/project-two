@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { combineLatest, map, Observable, startWith } from 'rxjs';
@@ -7,11 +7,13 @@ import { Recipe } from '../../interfaces/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
 
 @Component({
-  selector: 'app-recipe-card',
-  templateUrl: './recipe-card.component.html',
-  styleUrls: ['./recipe-card.component.scss']
+  selector: 'app-recipe-card-list',
+  templateUrl: './recipe-card-list.component.html',
+  styleUrls: ['./recipe-card-list.component.scss']
 })
-export class RecipeCardComponent implements OnInit {
+export class RecipeCardListComponent implements OnInit {
+  @Input()
+  recipes: Recipe[] | null = [];
   recipes$!: Observable<Recipe[]>;
   recipeForm!: FormGroup;
   mealType!: FormGroup;
