@@ -21,6 +21,7 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RecipeCardListComponent } from "./components/recipe-card-list/recipe-card-list.component";
+import { EditFormComponent } from './components/edit-form/edit-form.component';
 
 
 
@@ -29,7 +30,7 @@ import { RecipeCardListComponent } from "./components/recipe-card-list/recipe-ca
 
 
 @NgModule({
-  declarations: [MainComponent, FormComponent, SidebarComponent, RecipeCardListComponent],
+  declarations: [MainComponent, FormComponent, SidebarComponent, RecipeCardListComponent, EditFormComponent],
   imports: [
     CommonModule,
     HttpClientModule,

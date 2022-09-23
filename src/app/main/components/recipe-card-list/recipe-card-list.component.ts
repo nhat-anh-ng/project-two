@@ -1,10 +1,12 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { combineLatest, map, Observable, startWith } from 'rxjs';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { combineLatest, map, Observable, startWith, tap } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { Meal } from '../../enums/meal.enum';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
+import { EditFormComponent } from '../edit-form/edit-form.component';
 
 @Component({
   selector: 'app-recipe-card-list',
@@ -14,6 +16,9 @@ import { RecipeService } from '../../services/recipe.service';
 export class RecipeCardListComponent implements OnInit {
   @Input()
   recipes: Recipe[] | null = [];
+  @Output()
+  private recipesChanged = new EventEmitter();
+
   recipes$!: Observable<Recipe[]>;
   recipeForm!: FormGroup;
   mealType!: FormGroup;
@@ -48,19 +53,26 @@ export class RecipeCardListComponent implements OnInit {
    
   }
 
+  editRecipe(recipe: Recipe){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "400px";
+
+    dialogConfig.data = recipe;
+    const dialogRef = this.dialog.open(EditFormComponent, dialogConfig);
+
+    dialogRef.afterClosed()
+      .pipe(
+        filter(val => !!val),
+        tap(() => this.recipesChanged.emit())
+      ).subscribe();
+  }
+
   deleteRecipe(recipe: Recipe) {
     this.recipeService.delete(recipe.id!).subscribe(res => {
       this.recipes$ = this.recipeService.get();
     })
-  }
-
-  editRecipe(recipe: Recipe){
-    this.recipeObj.id = recipe.id;
-    this.recipeForm.controls['title'].setValue(recipe.title);
-    this.recipeForm.controls['img'].setValue(recipe.img);
-    this.recipeForm.controls['ingredients'].setValue(recipe.ingredients);
-    this.recipeForm.controls['preparation'].setValue(recipe.preparation);
-    this.recipeForm.controls['meal'].setValue(recipe.meal);
   }
 
   updateRecipe(){
