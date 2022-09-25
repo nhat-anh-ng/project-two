@@ -1,5 +1,5 @@
 {
-  "recipes": [
+  "foodapp": [
     {
       "id": "1",
       "title": "title1",
@@ -15,6 +15,38 @@
       "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
       "preparation": "abcdefg",
       "meal": "LUNCH"
+    },
+    {
+      "id": "2",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "LUNCH"
+    },
+    {
+      "id": "3",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DINNER"
+    },
+    {
+      "id": "2",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DESSERTS"
+    },
+    {
+      "id": "3",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DRINKS"
     }
   ]
 }

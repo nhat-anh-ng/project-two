@@ -1,11 +1,5 @@
-<form class="form">
-    <mat-form-field class="form__field" appearance="fill">
-        <mat-label>What's in your fridge? Ex. tomatoes </mat-label>
-        <input type="text" [formControl]="filter" matInput >
-    </mat-form-field>
-</form>
-<div *ngIf="recipes$ | async as recipe; else loading" class="recipes" > 
-<mat-card class="recipes__card" *ngFor="let recipe of filteredRecipe$ | async" >
+
+<mat-card class="recipes__card" *ngFor="let recipe of recipes" >
     <mat-card-title-group >
         <mat-card-title  >{{ recipe.title}}</mat-card-title>
         <mat-card-subtitle>{{ recipe.meal}}
@@ -20,13 +14,7 @@
     </mat-card-content>
     <mat-card-actions class="recipes__card-actions">
         <button mat-stroked-button (click)="editRecipe(recipe)" class="button">EDIT</button>
-        <button mat-stroked-button class="button" (click)="deleteRecipe(recipe)" mat-button>DELETE</button>
+        <button mat-stroked-button class="button"  mat-button>DELETE</button>
     </mat-card-actions>
    
 </mat-card>
-</div>
-
-<ng-template #loading>
-    <mat-spinner mode="indeterminate"></mat-spinner>
-    LOADING...
-</ng-template>

@@ -1,8 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Observable } from 'rxjs';
 import { Meal } from '../../enums/meal.enum';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
+import { RecipesStore } from '../../services/recipes.store';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +11,8 @@ import { RecipeService } from '../../services/recipe.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  
+  
   recipes$!: Observable<Recipe[]>;
   public mealTypes = Object.values(Meal).map(item => String(item));
   iconTypes = [
@@ -19,9 +22,10 @@ export class SidebarComponent implements OnInit {
       {icon: "widgets"},
       {icon: "local_drink"},
     ]
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService,  private recipesStore: RecipesStore) { }
 
   ngOnInit(): void {
     this.recipes$ = this.recipeService.get();
   }
+
 }

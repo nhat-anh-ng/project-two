@@ -1,9 +1,6 @@
 {
-    "/api/*": {
-        "target": "http://localhost:3000/recipes",
-        "pathRewrite":{
-            "^/api": ""
-        },
+    "/api": {
+        "target": "http://localhost:3000/foodapp",
         "secure": false,
         "logLevel": "debug"
     }
