@@ -3,6 +3,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { tap } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { Recipe } from '../../interfaces/recipe.model';
+import { RecipesStore } from '../../services/recipes.store';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 @Component({
@@ -15,8 +16,8 @@ export class RecipeCardListComponent implements OnInit {
   recipes: Recipe[] | null = [];
   @Output()
   private recipesChanged = new EventEmitter();
-
-  constructor(public dialog: MatDialog) { }
+  
+  constructor(public dialog: MatDialog,  private recipesStore: RecipesStore,) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +36,11 @@ export class RecipeCardListComponent implements OnInit {
         filter(val => !!val),
         tap(() => this.recipesChanged.emit())
       ).subscribe();
+  }
+
+  deleteRecipeCard(recipe: Recipe){
+    this.recipesStore.deleteRecipe(recipe.id!).subscribe();
+    this.recipesStore.loadAllRecipes()
   }
   
 }

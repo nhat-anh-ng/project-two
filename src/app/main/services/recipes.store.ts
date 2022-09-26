@@ -18,7 +18,7 @@ public readonly server = 'http://localhost:3000/foodapp';
         this.loadAllRecipes();
     }
 
-     private loadAllRecipes() {
+      loadAllRecipes() {
         
         const loadRecipes$ = this.http.get<Recipe[]>(`${this.server}`)
             .pipe(
@@ -54,6 +54,27 @@ public readonly server = 'http://localhost:3000/foodapp';
             .pipe(
                 shareReplay()
             );
+    }
+
+    deleteRecipe(recipeId: string):Observable<any>{
+        const recipes = this.subject.getValue();
+        const index = recipes.findIndex(recipe => recipe.id == recipeId);
+        const newRecipe: Recipe = {
+            ...recipes[index],
+        };
+
+        const newRecipes: Recipe[] = recipes.slice(0);
+        newRecipes[index] = newRecipe;
+
+        this.subject.next(newRecipes);
+
+        return this.http.delete<Recipe>(`${this.server}/${recipeId}`)
+            .pipe(
+                map((res) => {
+                    return res
+                }),
+                shareReplay()
+            )
     }
 }
 

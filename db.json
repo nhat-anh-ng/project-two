@@ -8,22 +8,6 @@
       "preparation": "abcdefg",
       "meal": "BREAKFAST"
     },
-     {
-      "id": "1a",
-      "title": "title1",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "BREAKFAST"
-    },
-     {
-      "id": "1b",
-      "title": "title1",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "BREAKFAST"
-    },
     {
       "id": "2",
       "title": "title",
