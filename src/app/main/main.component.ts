@@ -1,11 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { fromEvent, map, Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Recipe } from './interfaces/recipe.model';
 import { MatDialog } from '@angular/material/dialog';
 import { FormComponent } from './components/form/form.component';
 import { RecipesStore } from './services/recipes.store';
-import { DOCUMENT, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-main',

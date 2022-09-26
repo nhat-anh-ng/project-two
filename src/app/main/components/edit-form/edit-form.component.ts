@@ -31,9 +31,9 @@ export class EditFormComponent implements AfterViewInit {
 
   ngAfterViewInit() {}
 
-  updateRecipe() {
+  editRecipeCard() {
     const changes = this.editForm.value;
-    this.recipesStore.saveRecipe(this.recipe.id!, changes).subscribe();
+    this.recipesStore.editRecipe(this.recipe.id!, changes).subscribe();
 
     this.dialogRef.close(changes);
   }

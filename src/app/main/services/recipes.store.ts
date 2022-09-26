@@ -37,7 +37,17 @@ public readonly server = 'http://localhost:3000/foodapp';
             )
     }
 
-    saveRecipe(recipeId: string, changes: Partial<Recipe>): Observable<any>{
+    saveRecipe(recipe: Recipe):Observable<any>{
+        return this.http.post<Recipe>(`${this.server}`, recipe)
+            .pipe(
+                map((res) => {
+                    return res
+                }),
+                shareReplay()
+            )
+    }
+
+    editRecipe(recipeId: string, changes: Partial<Recipe>): Observable<any>{
         const recipes = this.subject.getValue();
         const index = recipes.findIndex(recipe => recipe.id == recipeId);
         const newRecipe: Recipe = {
@@ -50,7 +60,7 @@ public readonly server = 'http://localhost:3000/foodapp';
 
         this.subject.next(newRecipes);
 
-        return this.http.put(`/foodapp/${recipeId}`, changes)
+        return this.http.put(`${this.server}/${recipeId}`, changes)
             .pipe(
                 shareReplay()
             );

@@ -4,6 +4,7 @@ import { Recipe } from '../../interfaces/recipe.model';
 import { Meal } from '../../enums/meal.enum';
 import { RecipeService } from '../../services/recipe.service';
 import { RecipesStore } from '../../services/recipes.store';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -13,28 +14,32 @@ import { RecipesStore } from '../../services/recipes.store';
 export class FormComponent implements OnInit {
   recipe!: Recipe;
   recipeForm!: FormGroup;
+  recipeObj: Recipe = new Recipe();
   
-  get f() { return this.recipeForm.controls; }
-
-  constructor(private recipeService: RecipeService,private formBuilder: FormBuilder, private recipesStore: RecipesStore,) { }
-
-  ngOnInit(): void {
-    this.recipeForm = this.formBuilder.group({
-    id: new FormControl(null),
+  constructor(private fb: FormBuilder,
+    private router: Router,
+    private recipesStore: RecipesStore) {
+      this.recipeForm = this.fb.group({
     title: new FormControl('', [Validators.required] ),
     ingredients: new FormControl('', [Validators.required]),
     preparation: new FormControl('', [Validators.required]),
     img: new FormControl('' ),
-    meal: new FormControl(Meal, [Validators.required]),
+    meal: new FormControl('LUNCH', [Validators.required]),
     })
-  }
-  
-  saveRecipe(): void {
+     }
+
+  ngOnInit(): void {
     
   }
-
-  updateRecipe() {
-    const changes = this.recipeForm.value;
-    this.recipesStore.saveRecipe(this.recipe.id!, changes).subscribe();
+  
+  saveRecipeCard() {
+    this.recipeObj.title = this.recipeForm.value.title;
+    this.recipeObj.ingredients = this.recipeForm.value.ingredients;
+    this.recipeObj.preparation = this.recipeForm.value.preparation;
+    this.recipeObj.img = this.recipeForm.value.img;
+    this.recipeObj.meal = this.recipeForm.value.meal;
+    
+    this.recipesStore.saveRecipe(this.recipeObj).subscribe();
+    this.recipesStore.loadAllRecipes();
   }
 }
