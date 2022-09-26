@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Recipe } from '../../interfaces/recipe.model';
 import { Meal } from '../../enums/meal.enum';
 import { RecipeService } from '../../services/recipe.service';
+import { RecipesStore } from '../../services/recipes.store';
 
 @Component({
   selector: 'app-form',
@@ -10,13 +11,12 @@ import { RecipeService } from '../../services/recipe.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  public mealTypes = Object.values(Meal).map(item => String(item));
+  recipe!: Recipe;
   recipeForm!: FormGroup;
-  recipeObj: Recipe = new Recipe();
   
   get f() { return this.recipeForm.controls; }
 
-  constructor(private recipeService: RecipeService,private formBuilder: FormBuilder) { }
+  constructor(private recipeService: RecipeService,private formBuilder: FormBuilder, private recipesStore: RecipesStore,) { }
 
   ngOnInit(): void {
     this.recipeForm = this.formBuilder.group({
@@ -30,19 +30,11 @@ export class FormComponent implements OnInit {
   }
   
   saveRecipe(): void {
-    this.recipeObj.title = this.recipeForm.value.title;
-    this.recipeObj.ingredients = this.recipeForm.value.ingredients;
-    this.recipeObj.preparation = this.recipeForm.value.preparation;
-    this.recipeObj.img = this.recipeForm.value.img;
-    this.recipeObj.meal = this.recipeForm.value.meal;
     
-      this.recipeService.post(this.recipeObj).subscribe(res => {
-            this.recipeForm.reset();
-            window.location.reload();
-          },
-          error => {
-            this.recipeService.handleError(error);
-          }
-      )
+  }
+
+  updateRecipe() {
+    const changes = this.recipeForm.value;
+    this.recipesStore.saveRecipe(this.recipe.id!, changes).subscribe();
   }
 }

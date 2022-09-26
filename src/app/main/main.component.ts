@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
+import { Component, Inject, OnInit } from '@angular/core';
+import { fromEvent, map, Observable } from 'rxjs';
 
-import { AppState } from './interfaces/app-state';
-import { Recipe, sortRecipesBySeqNo } from './interfaces/recipe.model';
-import { RecipeService } from './services/recipe.service';
+import { Recipe } from './interfaces/recipe.model';
 import { MatDialog } from '@angular/material/dialog';
-import { Meal } from './enums/meal.enum';
-import { NgForm } from '@angular/forms';
-import { DataState } from './enums/data-state.enum';
 import { FormComponent } from './components/form/form.component';
 import { RecipesStore } from './services/recipes.store';
-
+import { DOCUMENT, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -23,16 +18,12 @@ export class MainComponent implements OnInit {
   dinnerRecipes$!: Observable<Recipe[]>;
   dessertsRecipes$!: Observable<Recipe[]>;
   drinksRecipes$!: Observable<Recipe[]>;
-  
-  constructor(public dialog: MatDialog, private recipesStore: RecipesStore, private recipesService: RecipeService) { }
+  top!:void;
+  constructor(public dialog: MatDialog, private recipesStore: RecipesStore) { }
 
   ngOnInit(): void {
     this.reloadRecipes()
-    this.recipesService.loadAllRecipes()
-      .pipe(
-        map(recipes => recipes.sort(sortRecipesBySeqNo))
-      )
-
+     
   }
 
   openDialog() {
@@ -40,12 +31,6 @@ export class MainComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-  }
-
-  message!:string;
-
-  receiveMessage($event: any) {
-    this.message = $event
   }
 
   reloadRecipes() {
@@ -56,5 +41,15 @@ export class MainComponent implements OnInit {
     this.drinksRecipes$ = this.recipesStore.filterByMeal("DRINKS");  
   }
 
+  scrollToTopMsg($event: any): void {
+    this.top = $event
+  }
 
 }
+
+/*
+this.recipesService.loadAllRecipes()
+      .pipe(
+        map(recipes => recipes.sort(sortRecipesBySeqNo))
+      )
+*/

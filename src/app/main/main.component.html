@@ -2,19 +2,25 @@
 
         <mat-tab-group mat-align-tabs="center">
         <mat-tab label="Breakfast">
+            
         <app-recipe-card-list  [recipes]="breakfastRecipes$ | async"></app-recipe-card-list>
+       <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
         <mat-tab label="Lunch">
             <app-recipe-card-list [recipes]="lunchRecipes$ | async"></app-recipe-card-list>
+            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
         <mat-tab label="Dinner">
             <app-recipe-card-list [recipes]="dinnerRecipes$ | async"></app-recipe-card-list>
+            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
         <mat-tab label="Desserts">
             <app-recipe-card-list [recipes]="dessertsRecipes$ | async"></app-recipe-card-list>
+            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
         <mat-tab label="Drinks">
             <app-recipe-card-list [recipes]="drinksRecipes$ | async"></app-recipe-card-list>
+            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>
@@ -25,10 +31,11 @@
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>
-               
                 <mat-icon>search</mat-icon>
                 Search
             </ng-template>
+            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
         </mat-tab>
+        
         </mat-tab-group>
 

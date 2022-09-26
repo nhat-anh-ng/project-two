@@ -35,20 +35,34 @@
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" required>
             <mat-label>Select a meal type</mat-label>
-            <mat-select disableRipple formControlName="meal" >
-                <mat-option >
-                    mealType
+            <mat-select formControlName="meal">
+        
+                <mat-option value="BREAKFAST">
+                    Breakfast
                 </mat-option>
+                <mat-option value="LUNCH">
+                    Lunch
+                </mat-option>
+                <mat-option value="DINNER">
+                    Dinner
+                </mat-option>
+                <mat-option value="DESSERTS">
+                    Desserts
+                </mat-option>
+                <mat-option value="DRINKS">
+                    Drinks
+                </mat-option>
+        
             </mat-select>
             <mat-error>
-                Meal type is required
+                Mealtype is required
             </mat-error>
         </mat-form-field>
     </div>
 
     <mat-dialog-actions>
-        <button type="button" (click)="saveRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Save</button>
+        <button type="button" (click)="updateRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Save</button>
     </mat-dialog-actions>
 </form>

@@ -1,6 +1,4 @@
-<div mat-subheader>FoodApp</div>
 
-<mat-list-option>
-    <mat-icon mat-list-icon>circle</mat-icon>
-    <p mat-line>Search</p>
-</mat-list-option>
+<button mat-mini-fab color="primary"  class="to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+<mat-icon>arrow_upward</mat-icon>
+</button>

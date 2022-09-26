@@ -1,12 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
-import { combineLatest, map, Observable, startWith, tap } from 'rxjs';
+import { tap } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { Meal } from '../../enums/meal.enum';
 import { Recipe } from '../../interfaces/recipe.model';
-import { RecipeService } from '../../services/recipe.service';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 @Component({
@@ -20,32 +16,9 @@ export class RecipeCardListComponent implements OnInit {
   @Output()
   private recipesChanged = new EventEmitter();
 
-  constructor(private recipeService: RecipeService, public dialog: MatDialog, private route: ActivatedRoute ) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    
-
-/*
-const recipeId = parseInt(this.route.snapshot.paramMap.get("recipeId")!);
-    const recipe$ = this.recipeService.loadRecipeById(recipeId)
-      .pipe(startWith(null));
-    
-    recipe$.pipe(
-      map((recipe) => {
-        return {
-          recipe
-        }
-      })
-    )
-    
-    this.recipes$ = this.recipeService.get();
-    this.filter = new FormControl('');
-    this.filter$ = this.filter.valueChanges;
-    this.filter$ = this.filter.valueChanges.pipe(startWith(''));
-    this.filteredRecipe$ = combineLatest(this.recipes$, this.filter$).pipe(
-    map(([dorms, filter]) => dorms.filter(dorms => dorms.ingredients?.toLowerCase().indexOf(filter.toLowerCase()) !== -1))
-    );
-   */
   }
 
   editRecipe(recipe: Recipe){
