@@ -1,4 +1,10 @@
 <form class="card__form" [formGroup]="recipeForm" >
+    <div *ngIf="showMessage">
+        <div>
+        Recipe has been saved!
+        </div>
+        <mat-icon class="close" (click)="onClose()">close</mat-icon>
+    </div>
     <h1 class="card__form-title">Add a new recipe</h1>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">

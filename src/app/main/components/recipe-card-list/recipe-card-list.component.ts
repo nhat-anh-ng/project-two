@@ -39,6 +39,7 @@ export class RecipeCardListComponent implements OnInit {
   }
 
   deleteRecipeCard(recipe: Recipe){
+    this.recipesStore.loadAllRecipes()
     this.recipesStore.deleteRecipe(recipe.id!).subscribe();
     this.recipesStore.loadAllRecipes()
   }
