@@ -1,0 +1,15 @@
+mat-form-field{
+    width: 30vw;
+}
+.search{
+    &__title{
+        margin-top: 1rem;
+    }
+
+    &__field{
+        width: 30vw;
+    }
+    &__result{
+        margin-bottom: 1rem;
+    }
+}

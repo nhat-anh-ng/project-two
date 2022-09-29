@@ -1,8 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { filter, tap } from 'rxjs';
-import { Recipe } from '../../interfaces/recipe.model';
-import { RecipesStore } from '../../services/recipes.store';
+import { Recipe } from '../interfaces/recipe.model';
+import { RecipesStore } from '../services/recipes.store';
+
 
 @Component({
   selector: 'app-delete-dialog',

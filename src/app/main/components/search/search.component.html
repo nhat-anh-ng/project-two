@@ -1,22 +1,28 @@
-<h2>Search All Recipes</h2>
-<mat-form-field appearance="outline">
-<input matInput [formControl]="filter" placeholder="Search" />
+<div class="search">
+<h2 class="search__title">Search All Recipes</h2>
+<mat-form-field class="search__field" appearance="outline">
+<input class="search__field-icon" matInput [formControl]="filter" placeholder="Search" />
 <mat-icon matSuffix>search</mat-icon>
+
 </mat-form-field>
 
-    <mat-card class="recipes__card" *ngFor="let recipe of filteredStates$ | async">
+    <mat-card class="search__result" *ngFor="let recipe of filteredStates$ | async">
         <mat-card-title-group>
             <mat-card-title>{{ recipe.title}}</mat-card-title>
             <mat-card-subtitle>{{ recipe.meal}}
             </mat-card-subtitle>
             <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
-            <img mat-card-md-image [src]="recipe.img">
+            <img mat-card-lg-image [src]="recipe.img">
         </mat-card-title-group>
     
         <mat-card-content>
             <h2>Preparation</h2>
             <p>Preparation: {{ recipe.preparation}}</p>
         </mat-card-content>
+        <mat-card-footer>
+            <mat-progress-bar mode="determinate" color="primary"></mat-progress-bar>
+        </mat-card-footer>
        
     </mat-card>
 
+</div>

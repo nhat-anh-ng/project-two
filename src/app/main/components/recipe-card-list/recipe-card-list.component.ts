@@ -2,9 +2,10 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { tap } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { DeleteDialogComponent } from '../../delete-dialog/delete-dialog.component';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipesStore } from '../../services/recipes.store';
-import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
+
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 @Component({
