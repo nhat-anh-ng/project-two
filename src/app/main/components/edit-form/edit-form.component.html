@@ -31,11 +31,8 @@
         <mat-form-field class="card__form-field" appearance="fill">
             <mat-label>Select a meal type</mat-label>
             <mat-select disableRipple formControlName="meal">
-                <mat-option value="BREAKFAST">
-                    Breakfast
-                </mat-option>
-                <mat-option value="LUNCH">
-                    Lunch
+                <mat-option *ngFor="let meal of meals" value="{{meal}}">
+                    {{meal}}
                 </mat-option>
             </mat-select>
             <mat-error>Meal type is required</mat-error>

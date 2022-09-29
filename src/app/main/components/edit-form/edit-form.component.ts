@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Meal } from '../../enums/meal.enum';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipesStore } from '../../services/recipes.store';
 
@@ -12,7 +13,8 @@ import { RecipesStore } from '../../services/recipes.store';
 export class EditFormComponent implements AfterViewInit {
   editForm!: FormGroup;
   recipe!: Recipe;
-
+  meals = Object.values(Meal);
+  
   constructor(
     private fb: FormBuilder,
     private recipesStore: RecipesStore,

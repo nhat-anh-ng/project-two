@@ -22,7 +22,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.reloadRecipes()
-     
   }
 
   openDialog() {
@@ -45,10 +44,3 @@ export class MainComponent implements OnInit {
   }
 
 }
-
-/*
-this.recipesService.loadAllRecipes()
-      .pipe(
-        map(recipes => recipes.sort(sortRecipesBySeqNo))
-      )
-*/

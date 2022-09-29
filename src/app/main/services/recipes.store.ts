@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
-import { map, filter, catchError, tap, shareReplay } from "rxjs/operators";
-import { Recipe, Recipes, sortRecipesBySeqNo } from "../interfaces/recipe.model";
+import { map, tap, shareReplay } from "rxjs/operators";
+import { Recipe, sortRecipesBySeqNo } from "../interfaces/recipe.model";
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ import { Recipe, Recipes, sortRecipesBySeqNo } from "../interfaces/recipe.model"
 export class RecipesStore {
     private subject = new BehaviorSubject<Recipe[]>([]);
     recipes$: Observable<Recipe[]> = this.subject.asObservable();
-public readonly server = 'http://localhost:3000/foodapp';
+    public readonly server = 'http://localhost:3000/foodapp';
     constructor(
         private http: HttpClient
     ){
