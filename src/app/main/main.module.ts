@@ -24,9 +24,11 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { RecipeCardListComponent } from "./components/recipe-card-list/recipe-card-list.component";
 import { EditFormComponent } from './components/edit-form/edit-form.component';
 import { SearchComponent } from "./components/search/search.component";
+import { DeleteDialogComponent } from "./components/delete-dialog/delete-dialog.component";
+
 
 @NgModule({
-  declarations: [ MainComponent, FormComponent, SidebarComponent, RecipeCardListComponent, EditFormComponent,  SearchComponent],
+  declarations: [ MainComponent, FormComponent, SidebarComponent, RecipeCardListComponent, EditFormComponent,  SearchComponent, DeleteDialogComponent],
   imports: [
     CommonModule,
     HttpClientModule,
