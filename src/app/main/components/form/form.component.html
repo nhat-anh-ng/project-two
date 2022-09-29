@@ -1,14 +1,8 @@
-<h2 mat-dialog-title>Install Angular</h2>
-
-    <button mat-button mat-dialog-close>Cancel</button>
-
-
-<form class="card__form" [formGroup]="recipeForm"  >
-    <h1 class="card__form-title">Add a recipe</h1>
+<form class="card__form" [formGroup]="recipeForm" >
+    <h1 class="card__form-title">Add a new recipe</h1>
     <div>
         <mat-form-field class="card__form-field" appearance="fill">
             <mat-label>Title</mat-label>
-            <input type="hidden"  formControlName="id">
             <input type="text"  formControlName="title" placeholder="Ex. Title" matInput required>
             <mat-error>
                 Title is required
@@ -40,12 +34,26 @@
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" >
             <mat-label>Select a meal type</mat-label>
-            <mat-select disableRipple formControlName="meal" >
-                <mat-option *ngFor="let mealType of mealTypes" value={{mealType}}>
-                    {{mealType}}
+            <mat-select formControlName="meal" required>
+        
+                <mat-option value="BREAKFAST">
+                    Breakfast
                 </mat-option>
+                <mat-option value="LUNCH">
+                    Lunch
+                </mat-option>
+                <mat-option value="DINNER">
+                    Dinner
+                </mat-option>
+                <mat-option value="DESSERTS">
+                    Desserts
+                </mat-option>
+                <mat-option value="DRINKS">
+                    Drinks
+                </mat-option>
+        
             </mat-select>
             <mat-error>
                 Meal type is required
@@ -54,6 +62,6 @@
     </div>
 
     <mat-dialog-actions>
-        <button type="button" (click)="saveRecipe()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Save</button>
+        <button type="button" (click)="saveRecipeCard()" [disabled]="recipeForm.invalid" mat-raised-button color="accent">Save</button>
     </mat-dialog-actions>
 </form>

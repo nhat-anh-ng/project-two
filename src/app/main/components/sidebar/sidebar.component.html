@@ -1,9 +1,4 @@
-<div mat-subheader>FoodApp</div>
-<div *ngFor="let recipe of mealTypes" >
-<mat-list-option>
-    <mat-icon mat-list-icon> circle</mat-icon>
-    <p mat-line>{{recipe}}</p>
-</mat-list-option>
-<mat-divider></mat-divider>
 
-</div>
+<button mat-mini-fab color="primary"  class="to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+<mat-icon>arrow_upward</mat-icon>
+</button>

@@ -1,0 +1,21 @@
+
+<mat-card class="recipes__card" *ngFor="let recipe of recipes" >
+    <mat-card-title-group >
+        <mat-card-title  >{{ recipe.title}}</mat-card-title>
+        <mat-card-subtitle>{{ recipe.meal}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>{{ recipe.ingredients}}</mat-card-subtitle>
+        <img mat-card-md-image [src]="recipe.img">
+    </mat-card-title-group>
+    
+    <mat-card-content>
+        <h2>Preparation</h2>
+        <p>Preparation: {{ recipe.preparation}}</p>
+    </mat-card-content>
+    <mat-card-actions >
+        <button mat-stroked-button mat-button>VIEW DETAILS</button>
+        <button mat-stroked-button (click)="editRecipe(recipe)" >EDIT</button>
+        <button mat-stroked-button (click)="deleteRecipeCard(recipe)" mat-button>DELETE</button>
+    </mat-card-actions>
+   
+</mat-card>

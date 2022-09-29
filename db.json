@@ -1,12 +1,12 @@
 {
-  "recipes": [
+  "foodapp": [
     {
-      "id": "1",
-      "title": "title1",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "title": "hello",
       "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "ingredients": "elo 1 cupe, 2 spoons, 3 tbs",
       "preparation": "abcdefg",
-      "meal": "BREAKFAST"
+      "meal": "BREAKFAST",
+      "id": "1"
     },
     {
       "id": "2",
@@ -15,6 +15,54 @@
       "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
       "preparation": "abcdefg",
       "meal": "LUNCH"
+    },
+    {
+      "id": "2",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "LUNCH"
+    },
+    {
+      "id": "3",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DINNER"
+    },
+    {
+      "id": "2",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DESSERTS"
+    },
+    {
+      "id": "3",
+      "title": "title",
+      "ingredients": "1 cupe, 2 spoons, 3 tbs",
+      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "preparation": "abcdefg",
+      "meal": "DRINKS"
+    },
+    {
+      "title": "Blackberry Ginger Iced Green Tea",
+      "img": "https://cdn.pickuplimes.com/cache/b9/ba/b9bad96fddd08d52ed85e72090833764.jpg",
+      "ingredients": "4 green tea bags, \n4 cups hot water,\n2 cups fresh blackberries,\n¾ cup frozen pineapple chunks,\n½ lime, juiced,\n1 Tbsp fresh ginger,\n1 Tbsp maple syrup, \n¼ cup fresh mint leaves,\n½ lime, sliced, ice cubes",
+      "preparation": "Add the green tea to the hot water and let it steep until it cools down completely. To a blender, add the blackberries, frozen pineapple, lime, ginger, and maple syrup. Blend until smooth. Strain the blended blackberry mixture through a sieve to remove the seeds. To assemble, first divide the puréed blackberry mixture between the glasses, followed by mint, lime slice cubes, and finish with the cooled green tea.\nStir and add more sweetener to taste. Garnish and enjoy!",
+      "meal": "DRINKS",
+      "id": "eKe0l84"
+    },
+    {
+      "title": "Mango Turmeric Lassi",
+      "ingredients": "2 soft Medjool dates, pits removed, \n2½ cups frozen mango chunks, \n2 cups unsweetened soy yogurt, \n¾ cup unsweetened soy milk,\n½ Tbsp fresh ginger,\n½ tsp ground turmeric,\n1 pinch of ground black pepper,\n¼ lemon, juiced",
+      "preparation": "Add all the ingredients to a blender and blend until smooth.\nPour into glasses and enjoy!",
+      "img": "https://cdn.pickuplimes.com/cache/e8/a3/e8a3d782482e2fe540b6340d7e20cce9.jpg",
+      "meal": "DRINKS",
+      "id": "DBZw35K"
     }
   ]
 }

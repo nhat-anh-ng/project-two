@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
+import { Observable } from 'rxjs';
 
-import { AppState } from './interfaces/app-state';
 import { Recipe } from './interfaces/recipe.model';
-import { RecipeService } from './services/recipe.service';
 import { MatDialog } from '@angular/material/dialog';
-import { Meal } from './enums/meal.enum';
-import { NgForm } from '@angular/forms';
-import { DataState } from './enums/data-state.enum';
 import { FormComponent } from './components/form/form.component';
-
+import { RecipesStore } from './services/recipes.store';
 
 @Component({
   selector: 'app-main',
@@ -17,22 +12,35 @@ import { FormComponent } from './components/form/form.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  constructor(public dialog: MatDialog) { }
+  breakfastRecipes$!: Observable<Recipe[]>;
+  lunchRecipes$!: Observable<Recipe[]>;
+  dinnerRecipes$!: Observable<Recipe[]>;
+  dessertsRecipes$!: Observable<Recipe[]>;
+  drinksRecipes$!: Observable<Recipe[]>;
+  top!:void;
+  constructor(public dialog: MatDialog, private recipesStore: RecipesStore) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.reloadRecipes()
+  }
 
   openDialog() {
     const dialogRef = this.dialog.open(FormComponent);
-
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
   }
 
-  message!:string;
+  reloadRecipes() {
+    this.breakfastRecipes$ = this.recipesStore.filterByMeal("BREAKFAST");
+    this.lunchRecipes$ = this.recipesStore.filterByMeal("LUNCH");
+    this.dinnerRecipes$ = this.recipesStore.filterByMeal("DINNER");
+    this.dessertsRecipes$ = this.recipesStore.filterByMeal("DESSERTS"); 
+    this.drinksRecipes$ = this.recipesStore.filterByMeal("DRINKS");  
+  }
 
-  receiveMessage($event: any) {
-    this.message = $event
+  scrollToTopMsg($event: any): void {
+    this.top = $event
   }
 
 }
