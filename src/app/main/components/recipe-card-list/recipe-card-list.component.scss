@@ -1,11 +1,11 @@
 .recipes {
     columns: 3;
     gap: 1rem;
-    &__card,
-        .grid {
+    &__card{
             break-inside: avoid;
             margin-bottom: 1rem;
         }
+        
 }
 
 @media screen and (max-width: 1100px) {

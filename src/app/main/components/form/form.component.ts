@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
     ingredients: new FormControl('', [Validators.required]),
     preparation: new FormControl('', [Validators.required]),
     img: new FormControl('' ),
-    meal: new FormControl('LUNCH', [Validators.required]),
+    meal: new FormControl('', [Validators.required]),
     })
   }
 

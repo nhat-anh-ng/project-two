@@ -1,210 +1,82 @@
 {
   "foodapp": [
     {
-      "title": "Blackberry Ginger Iced Green Tea",
-      "img": "https://cdn.pickuplimes.com/cache/b9/ba/b9bad96fddd08d52ed85e72090833764.jpg",
-      "ingredients": "4 green tea bags, \n4 cups hot water,\n2cups fresh blackberries,\n¾ cup frozen pineapple chunks,\n½ lime, juiced,\n1Tbsp fresh ginger,\n1 Tbsp maple syrup, \n¼ cup fresh mint leaves,\n½ lime, sliced, ice cubes",
-      "preparation": "Add the green tea to the hot water and let it steep until it cools down completely. To a blender, add the blackberries, frozen pineapple, lime, ginger, and maple syrup. Blend until smooth. Strain the blended blackberry mixture through a sieve to remove the seeds. To assemble, first divide the puréed blackberry mixture between the glasses, followed by mint, lime slice cubes, and finish with the cooled green tea.\nStir and add more sweetener to taste. Garnish and enjoy!",
+      "title": "Blackberry Ginger Iced Tea",
+      "img": "assets/j.png",
+      "ingredients": "4 green tea bags, \n4 cups hot water,\n2cups blackberries,\n¾ cup pineapple,\n½ lime,\n1Tbsp ginger,\n1 Tbsp maple syrup, \n¼ cup mint leaves,\n½ lime, ice cubes",
+      "preparation": "Add the green tea to the hot water and let it steep until it cools down completely. To a blender, add the blackberries, frozen pineapple, lime, ginger, and maple syrup. Blend until smooth. Strain the blended blackberry mixture through a sieve. Divide the puréed blackberry mixture between the glasses, followed by mint, lime slice cubes, and finish with the cooled green tea.\nStir and add more sweetener to taste. Garnish and enjoy!",
       "meal": "DRINKS",
       "id": "eKe0l84"
     },
     {
       "title": "Mango Turmeric Lassi",
-      "img": "https://cdn.pickuplimes.com/cache/e8/a3/e8a3d782482e2fe540b6340d7e20cce9.jpg",
-      "ingredients": "2 soft Medjool dates, pits removed, \n2½cups frozen mango chunks, \n2 cups unsweetened soy yogurt, \n¾ cup unsweetened soy milk,\n½ Tbsp fresh ginger,\n½ tsp ground turmeric,\n1 pinch of ground black pepper,\n¼ lemon",
+      "img": "assets/d.png",
+      "ingredients": "2 soft Medjool dates, \n2½cups mango, \n2 cups yogurt, \n¾ cup milk,\n½ Tbsp ginger,\n½ tsp turmeric,\n1 pinch of black pepper,\n¼ lemon",
       "preparation": "Add all the ingredients to a blender and blend until smooth.\nPour into glasses and enjoy!",
       "meal": "DRINKS",
       "id": "DBZw35K"
     },
     {
       "title": "Brown Sugar Matcha Bubble Tea",
-      "img": "https://cdn.pickuplimes.com/cache/98/57/9857cac22aaa0ca02760ac4df289836d.jpg",
-      "ingredients": "2 Tbsp brown sugar,\n2 Tbsp boiling water,\n½ cup quick-cooking tapioca pearls,\n2 tsp matcha powder,\n½ cup hot water, \n1 tsp pure vanilla extract\n1cup ice cubes\n2½ cups oat milk",
-      "preparation": "Add the brown sugar and boiling water to a bowl. Stir vigorously until the sugar has dissolved.\nIn a saucepan, cook the tapioca pearls according to the package instructions. For us, this took about 5 minutes.\nDrain the tapioca pearls, rinse under cold water, and transfer to the brown sugar syrup jar. Give it a mix.\nSift the matcha powder into a bowl. Then add the hot water. Use a matcha whisk* to whisk until there’s a foam layer on top of the matcha.\nAdd the vanilla extract to the matcha mixture and whisk again until combined.\nDivide the brown sugar pearls between the glasses, top with the ice cubes, milk, and lastly the matcha. Enjoy!",
+      "img": "assets/t.png",
+      "ingredients": "2 Tbsp brown sugar,\n2 Tbsp boiling water,\n½ cup tapioca pearls,\n2 tsp matcha powder,\n½ cup hot water, \n1 tsp pure vanilla extract\n1cup ice cubes\n2½ cups milk",
+      "preparation": "Add the brown sugar and boiling water to a bowl. Stir until the sugar has dissolved.\nIn a saucepan, cook the tapioca pearls for 5 minutes.\nDrain the tapioca pearls, rinse under cold water, and transfer to the brown sugar syrup jar. Give it a mix.\nSift the matcha powder into a bowl. Add the hot water. Whisk until there’s a foam layer on top of the matcha.\nAdd the vanilla extract to the matcha mixture and whisk again until combined.\nDivide the brown sugar pearls between the glasses, top with the ice cubes, milk, and the matcha. Enjoy!",
       "meal": "DRINKS",
       "id": "K3khfx8"
     },
     {
-      "title": "Layered Chocolate Raspberry Mousse",
-      "ingredients": "300 g silken tofu, drained\n200g melted dark chocolate,\n½ tsp pure vanilla extract,\n¼ tsp ground cardamom,\n¼ cup granulated sugar, \n4 cups fresh raspberries, \n½ cup vegan whipping cream,\n1 Tbsp cream stabilizer",
-      "preparation": "To a food processor, add the tofu, melted chocolate, vanilla, cardamom, and half the sugar. Blend until smooth.\nTo each of the serving glasses, add ¼ cup of raspberries. Lightly mash the raspberries with the back of a spoon or tamper.\nReserve about ¼ of the blended chocolate mixture in a bowl. Divide the remaining between your glasses over the mashed raspberries. Place the glasses in the fridge while preparing the next layer.\nTo a large bowl, add the whipping cream, cream stabilizer, and remaining sugar. Whip on medium-high with an electric hand mixer for about 7 minutes, or until stiff peaks form. Reserve some of the whipped cream as a topping if desired.\nThen add the reserved blended chocolate mixture to the remaining whipped cream and gently fold together.\nRemove the cups from the fridge and add some raspberries (or other berries) as the next layer.\nThen divide this whipped chocolate mousse between the glasses.\nTop with the reserved whipped cream and any desired garnishes. Enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/5b/e0/5be09508c3f72243ce48c96c89e9c326.jpg",
-      "meal": "DESSERTS",
-      "id": "ztEFooG"
-    },
-    {
-      "title": "Coconut Mango Passion Fruit Trifle",
-      "ingredients": "¾ cup passion fruit pulp,\n½ cup frozen mango chunks,\n2 tsp granulated sugar,\nCoconut whip,\n1⅓ cups coconut cream,\n2 Tbsp powdered sugar\n1 tsp pure vanilla extract,\n165g Biscoff speculoos cookies,\n2 Tbsp unsalted vegan butter ",
-      "preparation": "Place a sieve over a saucepan and strain out the passion fruit seeds. Set the seeds aside if desired, to use for garnish.\nWith the saucepan over medium-high heat, add the mango and sugar. Cook at a gentle simmer for 4 minutes, until slightly thickened. Set aside to cool.\nIn a large bowl, use an electric hand mixer to whip the coconut cream* for a few minutes. Then add the sugar and vanilla and whip again.\nAdd the cookies and butter to a food processor and blend into a crumb. Then add 2 Tbsp of the cookie crumbs to each serving glass and press down to form a crust on the bottom.\nIn the now-empty food processor, blend the mango mixture until puréed.\nSpoon a heaping ¼ cup of the coconut whipping cream on top of the cookie layer, followed by a tablespoon of the passion fruit mixture. Garnish as desired, and enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/59/da/59da2bc0b5c59ae1595e0f1fcfe18187.jpg",
-      "meal": "DESSERTS",
-      "id": "C8Qv4mU"
-    },
-    {
-      "title": "High Protein Vegan Pancakes",
-      "img": "https://cdn.pickuplimes.com/cache/63/92/639250160b876a1386facd8c92ac500c.jpg",
-      "ingredients": "300g silken tofu,\n1½cups unsweetened milk, \n2Tbsp maple syrup,\n2tsp pure vanilla extract,\n2tsp lemon juice,\n3½cups flour, \n2tsp baking powder,\n1tsp baking soda,\n1tsp ground cinnamon,\n¼tsp salt,\n1Tbsp vegetable oil,\n1cup greek yogurt,\n1cup mixed fresh berries",
-      "preparation": "To a blender, add the tofu, pea milk, maple syrup, vanilla, and lemon juice. Blend until smooth.\nTo a large bowl, add the spelt flour, baking powder, baking soda, cinnamon, and salt. Mix well. Then add the wet ingredients from the blender. Mix until just combined, but be careful not to over-mix. If the mixture is too thick, add a splash of plant milk to thin it out a touch.\nHeat a non-stick crêpe pan on medium-high heat and use a bit of oil to lightly grease the pan. Use a ¼ measuring cup to pour the batter onto the pan. Cook for 2 minutes on each side, or until golden. Continue with the leftover batter.\nTop with yogurt, nuts, berries, and maple syrup if desired, and enjoy.",
+      "title": "High Protein Pancakes",
+      "img": "assets/c.png",
+      "ingredients": "300g tofu,\n1½cups milk, \n2Tbsp maple syrup,\n2tsp vanilla extract,\n2tsp lemon juice,\n3½cups flour, \n2tsp baking powder,\n1tsp baking soda,\n1tsp cinnamon,\n¼tsp salt,\n1Tbsp vegetable oil,\n1cup yogurt,\n1cup mixed fresh berries",
+      "preparation": "To a blender, add the tofu, pea milk, maple syrup, vanilla, and lemon juice. Blend until smooth.\nTo a large bowl, add the spelt flour, baking powder, baking soda, cinnamon, and salt. Mix well. Add the wet ingredients from the blender. Mix until just combined, but be careful not to over-mix. If the mixture is too thick, add a splash of plant milk to thin it out a touch.\nHeat a non-stick crêpe pan on medium-high heat and use a bit of oil to lightly grease the pan. Use a ¼ measuring cup to pour the batter onto the pan. Cook for 2 minutes on each side, or until golden. Continue with the leftover batter.\nTop with yogurt, nuts, berries, and maple syrup, and enjoy.",
       "meal": "BREAKFAST",
       "id": "M_2MgLB"
     },
     {
-      "title": "Miso Sesame Soba Noodles",
-      "img": "https://cdn.pickuplimes.com/cache/fa/41/fa41fa578015f6cd9eee285e14cb16d8.jpg",
-      "ingredients": "⅓cup rice vinegar,\n¼cup tahini,\n3Tbsp miso paste,\n2Tbsp soy sauce,\n2cloves garlic, \n2tsp sesame oil,\n2tsp maple syrup,\n1tsp ginger,\n180g soba noodles,\n1tsp sesame oil,\n140g shiitake mushrooms, \n1½cups edamame beans,\n1 avocado, \n6 radishes, \n1 stalk green onion, \n1Tbsp sesame seeds",
-      "preparation": "In a mason jar, mix together the rice vinegar*, tahini, miso paste, soy sauce, garlic, sesame oil, maple syrup, and ginger.\nIn a saucepan, cook the soba noodles according to the package instructions, then drain. For us, this took about 5 minutes.\nMeanwhile, add the oil to a large pan on high heat. When hot, add in the mushrooms and edamame beans and cook until softened, about 5 minutes.\nThen add the soba noodles, and dressing. Let everything heat through.\nDivide the noodles between your bowls, and top with sliced avocado, radishes, green onions, and sesame seeds. Enjoy!",
-      "meal": "LUNCH",
-      "id": "vtxFYe3"
-    },
-    {
       "title": "Oatmeal with Caramelized Pear",
-      "ingredients": "1 cup rolled oats \n2 cups of soy milk \n1 tsp ground cinnamon,\n½ tsp ground ginger,\n¼ tsp ground cloves,\n⅛ tsp ground allspice,\n2 Tbsp ground flaxseeds,\n2 tsp maple syrup,\n1 tsp blackstrap molasses,\n1 pear, \n2 tsp maple syrup ",
-      "preparation": "To a saucepan, add the oats, milk, cinnamon, ginger, cloves, and allspice. Bring to a gentle boil, then reduce to a simmer for 5 minutes, stirring occasionally.\nMeanwhile, to a medium pan on medium-high heat, add the sliced pear and the maple syrup. Let the pear caramelize for about 4 minutes while stirring and flipping the pear slices occasionally. Take off the heat.\nTo the saucepan of oatmeal, add the flaxseeds, maple syrup, and molasses and let it cook for another 1 - 2 minutes. Add more milk if you prefer a thinner consistency.\nDivide the oatmeal, caramelized pear, yogurt, and pecans between the bowls. Enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/73/42/7342d87de29238a1481dea246166b915.jpg",
+      "ingredients": "1cup oats \n2cups milk \n1tsp cinnamon,\n½tsp ginger,\n¼tsp cloves,\n⅛tsp allspice,\n2Tbsp flaxseeds,\n2tsp maple syrup,\n1tsp blackstrap molasses,\n1 pear, \n2tsp maple syrup ",
+      "preparation": "To a saucepan, add the oats, milk, cinnamon, ginger, cloves, and allspice. Bring to a gentle boil, then reduce to a simmer for 5 minutes, stirring occasionally.\nTo a medium pan on medium-high heat, add the sliced pear and the maple syrup. Let the pear caramelize for about 4 minutes while stirring and flipping the pear slices occasionally. Take off the heat.\nTo the saucepan of oatmeal, add the flaxseeds, maple syrup, and molasses and let it cook for another 1 - 2 minutes. Add more milk if you prefer a thinner consistency.\nDivide the oatmeal, caramelized pear, yogurt, and pecans between the bowls. Enjoy!",
+      "img": "assets/p.png",
       "meal": "BREAKFAST",
       "id": "2ZghhVh"
     },
     {
-      "title": "Peppermint Mocha",
-      "ingredients": "1 Tbsp granulated sugar,\n2 tsp cocoa powder,\n1 tsp instant coffee granules,\n6 g dark chocolate, \n1 tsp peppermint candies, finely chopped,\n½ cup boiling water,\n2 cups barista oat milk",
-      "preparation": "In a jar, mix the sugar, cocoa powder, instant coffee, chocolate, and peppermint*.\nMix 1½ Tbsp of the powdered mix with ¼ cup (60 mL) of boiling water in each mug and stir to dissolve.\nThen add 1 cup (240 mL) hot milk per mug and stir.\nTop with whipped cream, chocolate shavings, and peppermint pieces if desired. Enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/bd/e3/bde3f89d254d12b0fdd602fd2c111306.jpg",
-      "meal": "DRINKS",
-      "id": "DSlpxBa"
-    },
-    {
-      "title": "Spicy Vegan Chipotle Fajitas",
-      "img": "https://cdn.pickuplimes.com/cache/12/0e/120e62d1ead2abaa08ac3addb1edcf71.jpg",
-      "ingredients": "1Tbsp vegetable oil,\n1 onion, \n3 cloves garlic,  \n½tsp salt,\n3 bell peppers,\n1½cups chicken, \n2tsp cumin,\n1tsp oregano,\n1tsp paprika powder,\n½tsp chili powder,\n¼tsp black pepper,\n12 small tortillas,\n3Tbsp peppers in adobo sauce,\n1 avocado,  \n⅔cup salsa,\n½cup red cabbage, \n1 lime",
-      "preparation": "Add the oil to a large pan on medium-high heat. When hot, add the onion, garlic, and salt, and let cook for 4 - 5 minutes. Meanwhile, slice the bell peppers.\nThen add the bell peppers, mock \"chicken\", and spices. Cook for 5 minutes, or until the bell peppers have softened but are still crunchy. Add splashes of water as needed to deglaze the pan.\nMeanwhile, heat a separate large pan on medium-high heat, and place the tortillas on top in a single layer. Toast for a few seconds on each side, until golden.\nReturning to the bell peppers, add the diced chipotle sauce. Cook for an extra 2 minutes.\nTo assemble the fajitas, top the tortillas with the bell pepper mixture and your desired toppings. Squeeze some fresh lime juice over top, and enjoy!",
-      "meal": "LUNCH",
-      "id": "Y4ZU1Oz"
-    },
-    {
-      "title": "Coconut & Tofu Thai Red Curry",
-      "img": "https://cdn.pickuplimes.com/cache/a5/e5/a5e5d7fb475f29ab60345d01c5744a54.jpg",
-      "ingredients": "½Tbsp vegetable oil\n3 shallots, \n2 cloves garlic, \n2 potatoes, \n3Tbsp Thai red curry paste \n1¼cups water\n1cup basmati rice \n350g tofu strips,\n2 red bell peppers, \n1 broccoli,\n1⅔cups coconut milk \n1Tbsp soy sauce,  \n1 tsp sambal oelek,  \n⅓cup cashews",
-      "preparation": "In a large pot on high heat, add the oil and sauté the shallots for about 5 minutes, or until lightly golden. Add splashes of water as needed to de-glaze the pan.\nAdd the garlic and cook for another 2 minutes.\nAdd the potatoes and curry paste, and cook for 1 - 2 minutes.\nThen add the water to the pot. Bring to a boil, then reduce to a simmer, and cover with a lid. Simmer for 15 minutes.\nMeanwhile, cook the rice according to package directions.\nAdd the remaining ingredients to the pot and cook for about 6 - 8 minutes, or until the veggies are cooked to desired tenderness.\nServe with the rice, and top with cashews for crunch. Enjoy!",
-      "meal": "DINNER",
-      "id": "lXyAhT2"
-    },
-    {
-      "title": "Lemon Yogurt Parfait",
-      "img": "https://cdn.pickuplimes.com/cache/a3/c5/a3c524f9309525364884a102072e5c73.jpg",
-      "ingredients": "¼ cup greek-style yogurt,\n1 Tbsp cashew butter,\n½ tsp maple syrup,\n¼tsp lemon zest,\n⅛ tsp pure vanilla extract,\n1 cookie,\n¼ cup fresh berries",
-      "preparation": "In a small bowl, combine the yogurt, cashew butter, maple syrup, lemon zest, and vanilla extract.\nCrumble half the digestive biscuit into the bottom of a cup, top with half of the yogurt mixture, crumble the other half of the biscuit over that, then finish with the remaining yogurt.\nAdd the fruit and you're good to go!",
-      "meal": "DESSERTS",
-      "id": "DvE9zm1"
-    },
-    {
-      "title": "Warm Pearl Couscous Salad",
-      "img": "https://cdn.pickuplimes.com/cache/8d/96/8d96e9824bb40f67df0b3c012a63400d.jpg",
-      "ingredients": "1cup pearl couscous,\n2tsp olive oil,\n2cups chickpeas, \n2cups cherry tomato, \n½tsp salt,\n¼tsp black pepper,\n½ cucumber, \n¼cup black olives,\n3Tbsp mint leaves,\n2Tbsp basil, \n2Tbsp parsley, \n¼cup roasted almonds, \n3Tbsp olive oil,\n3Tbsp red wine vinegar, \n½ lemon, \n¼tsp paprika powder",
-      "preparation": "Cook the couscous according to the package instructions, then drain.\nMeanwhile, to a medium pan on medium-high heat, add the oil, chickpeas, tomatoes, salt, and pepper. Cook for about 5 - 7 minutes, stirring occasionally. Remove from the heat.\nIn a small bowl, mix together the ingredients for the dressing.\nTo a large bowl, add the drained couscous, tomato and chickpea mixture, cucumber slices, olives, and fresh herbs. Add the dressing, toss to combine, spinkle over the almonds, and enjoy!",
-      "meal": "LUNCH",
-      "id": "EJdsvJs"
-    },
-    {
       "title": "Raspberry Lemonade Smoothie Bowl",
-      "img": "https://cdn.pickuplimes.com/cache/c1/28/c128faa61f5429c391e6667caf134f00.jpg",
-      "ingredients": "1½cups frozen raspberries,\n1frozen banana,\n1lemon, \n½cup soy yogurt,\n½cup roasted cashews,\n¼cup soy milk,\n1Tbsp agave syrup,\nfresh fruit,\nhemp seeds,\nlemon zest,\nvegan granola",
+      "img": "assets/s.png",
+      "ingredients": "1½cups raspberries,\n1 banana,\n1 lemon, \n½cup yogurt,\n½cup cashews,\n¼cup milk,\n1Tbsp agave syrup,\nfresh fruit,\nhemp seeds,\nlemon zest,\nvegan granola",
       "preparation": "Add all ingredients to a high-speed blender and blend until smooth.\nTaste test. The raspberries are tart and the lemon is sour. If you feel it's needed, add more syrup to cut through the tartness.\nDivide into bowls and add desired toppings. Enjoy!",
       "meal": "BREAKFAST",
       "id": "ick9yme"
     },
     {
-      "title": "Oyster Mushroom Curry Salad Sandwich",
-      "img": "https://cdn.pickuplimes.com/cache/b8/96/b8967a92c79c95f47a7df85674574eed.jpg",
-      "ingredients": "1tsp olive oil,\n1 clove garlic, \n½ shallot, \n2cups oyster mushrooms,\n⅛tsp salt,\n½tsp cumin,\n½tsp coriander,\n¼tsp ginger,\n⅛tsp black pepper,\n½cup pineapple, \n2Tbsp mayonnaise,\n2Tbsp yogurt,\n1tsp curry powder,\n1tsp dijon mustard,\n4 slices of bread, \n2 romaine lettuce leaves, \n1 tomato, \n1 green onion",
-      "preparation": "Heat a medium pan over medium-high heat. Add the oil, garlic, and shallot. Cook for 2 - 3 minutes. Using your hands, peel the mushrooms into small strips, and add them to the pan along with the salt. Cook, while stirring occasionally for 3 minutes.\nNext, add the cumin, coriander, ginger, and pepper, and cook for another 3 minutes. By now, the liquid from the mushrooms should have evaporated. Transfer the mixture to a bowl.\nTo the same bowl, add the pineapple, mayo, yogurt, curry powder, and mustard. Stir to combine.\nTo assemble the sandwich, begin with a slice of your favourite bread. Layer it with lettuce, tomato slices, the mushroom curry mixture, and top it with some green onions. Enjoy!",
-      "meal": "DINNER",
-      "id": "YX6rbZ2"
-    },
-    {
-      "title": "Oven Roasted Sweet Potato & Tofu Veggie Skewers",
-      "img": "https://cdn.pickuplimes.com/cache/e5/34/e534fd4689678b4607e0b32079c82ff6.jpg",
-      "ingredients": "450g tofu, \n1tsp olive oil,\n1Tbsp cornstarch,\n1tsp garlic powder,\n½tsp salt,\n¼tsp black pepper,\n2Tbsp olive oil,\n½ lemon,\n¼tsp oregano,\n¼tsp thyme,\n¼tsp basil,\n¼tsp salt,\n⅛tsp black pepper,\n1 yellow bell pepper, \n1 red bell pepper, \n1 red onion, \n1 sweet potato, \n½ zucchini, \n21 cherry tomatoes",
-      "preparation": "Soak about 20 - 25 wooden 7 inch (18 cm) skewers in a shallow dish of water for about 15 minutes. This will prevent the skewers from burning when they are baking. Preheat the oven to 390°F (200°C).\nCut the tofu into 1 inch (2 cm) bite-sized squares that are rather thin, but not too thin that they fall apart when threading through the skewer. If cut too thick, they won't crisp up as nicely.\nTo a large shallow dish, add the tofu pieces, drizzle over the olive oil, and gently toss to coat. Then add the cornstarch, garlic powder, salt, and pepper, and give it another gentle toss.\nTo a medium bowl, add the ingredients for the marinade, and give it a mix.\nThread the tofu on the skewers along with the chopped veggies. Repeat until the skewer is filled up, and finish it with a cherry tomato on top.\nBrush the marinade over the skewers, and place the skewers onto a wire rack. Place the rack into the centre of the oven, with a baking tray underneath to catch any liquid that drips off.\nBake in the oven for 25 - 30 minutes, or until the veggies are cooked to your liking. These skewers are delicious on their own, but we definitely recommend enjoying them together with our vegan tzatziki recipe! Enjoy!",
-      "meal": "DINNER",
-      "id": "ThMgoFg"
-    },
-    {
-      "title": "Peach Thyme Iced Tea",
-      "img": "https://cdn.pickuplimes.com/cache/81/9a/819a8cb425d72ef0314f921d19aca1c8.jpg",
-      "ingredients": "4 cups boiling water,\n4 white tea bags, \n3 lemons, \n6 ripe peaches, \n10 fresh thyme,\n1 cup water,\n⅓ cup maple syrup,\n1½ cups of ice cubes,\n½ peach, \n4 fresh thyme",
-      "preparation": "To a large jar, add the boiled water and tea bags, and let it steep for 8 - 10 minutes. Then remove the tea bags and let cool off. Once cooled, stir in the lemon juice.\nTo a saucepan, add the peaches, thyme, water, and maple syrup.\nBring to a boil, then reduce to a gentle simmer and cook uncovered for about 20 minutes, stirring occasionally. Once softened, mash the peaches using the back of a spatula or tamper.\nPlace a sieve over a bowl and strain through the peach mixture. Using the back of a spoon, press out as much liquid from the mixture into the bowl as possible*. Let this cool off completely.\nTo assemble the drinks, divide the ice cubes between your glasses. Then pour one part of peach syrup to two parts of the cooled lemon tea mixture into your cups. Stir, garnish, and enjoy!",
-      "meal": "DRINKS",
-      "id": "A2Jy9J_"
-    },
-    {
-      "title": "Vegan Breakfast Waffles",
-      "img": "https://cdn.pickuplimes.com/cache/1c/51/1c5108ea4fe296662cb3575b9549b1b4.jpg",
-      "ingredients": "1½cups soy milk,\n1Tbsp apple cider vinegar,\n2cups whole wheat flour,\n⅓cup applesauce,\n2tsp baking powder,\n1tsp ground cinnamon,\n1tsp pure vanilla extract,\n½tsp salt",
-      "preparation": "To a large bowl, add the milk and vinegar, mix, and let this rest for 5 minutes. The milk will start to slightly curdle, and this is normal.\nHeat the waffle maker. Then, returning to the bowl, add the flour, applesauce, baking powder, cinnamon, vanilla, and salt, then mix until just combined.\nBrush the waffle pan with some oil. Add a few spoonfuls of the waffle batter until the element is filled near to the top. Gently close the lid, and let it cook for 4 - 5 minutes, or until golden. Repeat this with the remaining batter.\nAdd desired toppings to your waffles, and enjoy!",
+      "title": "Breakfast Waffles",
+      "img": "assets/a.png",
+      "ingredients": "1½cups milk,\n1Tbsp apple cider vinegar,\n2cups flour,\n⅓cup applesauce,\n2tsp baking powder,\n1tsp cinnamon,\n1tsp vanilla extract,\n½tsp salt",
+      "preparation": "To a large bowl, add the milk and vinegar, mix, and let this rest for 5 minutes. Milk will start to slightly curdle.\nHeat the waffle maker. Returning to the bowl, add the flour, applesauce, baking powder, cinnamon, vanilla, and salt, then mix until just combined.\nBrush the waffle pan with some oil. Add a few spoonfuls of the waffle batter until the element is filled near to the top. Gently close the lid, and let it cook for 4-5 minutes, or until golden. Repeat this with the remaining batter.\nAdd toppings to your waffles, and enjoy!",
       "meal": "BREAKFAST",
       "id": "LDx37Ya"
     },
     {
       "title": "Crunchy Almond & Mango Granola",
-      "img": "https://cdn.pickuplimes.com/cache/5e/d2/5ed25fa69e9212d50074a13c8b2dda4b.jpg",
-      "ingredients": "2½cups rolled oats,\n1cup puffed quinoa, \n½cup raw almonds,\n½cup shredded coconut,\n½cup roasted pumpkin seeds, \n¼cup brown sugar,\n½tsp cinnamon,\n¼cup vegetable oil,\n¼cup maple syrup,\n¼cup almond butter,\n1tsp pure vanilla extract,\n¾tsp salt,\n2Tbsp hemp seeds,\n½cup dried mango",
-      "preparation": "Preheat the oven to 320°F (160°C). To a large bowl, add the oats, puffed quinoa, almonds, coconut, pumpkin seeds, brown sugar, and cinnamon, and give it a stir.\nTo a separate medium bowl, add the oil, syrup, almond butter, vanilla, and salt. Whisk until it's all combined into a smooth caramel-like sauce.\nPour this wet mix over the dry mix, and stir until coated.\nTransfer to a large lined baking tray and spread it out. Bake on the centre rack of the oven for 30 minutes, or until lightly golden, stopping stir once halfway.\nRemove from the oven and allow it to cool. It continues to harden as it cools. Add the hemp seeds and dried mango, and toss.\nWhen completely cooled, transfer the granola to a storage container. Enjoy with fruit, and yogurt or milk for breakfast, or as a snack!",
+      "img": "assets/b.png",
+      "ingredients": "2½cups oats,\n1cup quinoa, \n½cup almonds,\n½cup shredded coconut,\n½cup pumpkin seeds, \n¼cup sugar,\n½tsp cinnamon,\n¼cup vegetable oil,\n¼cup maple syrup,\n¼cup almond butter,\n1tsp vanilla extract,\n¾tsp salt,\n2Tbsp hemp seeds,\n½cup dried mango",
+      "preparation": "Preheat the oven to 160°C. To a large bowl, add the oats, puffed quinoa, almonds, coconut, pumpkin seeds, brown sugar, and cinnamon, and give it a stir.\nTo a separate medium bowl, add the oil, syrup, almond butter, vanilla, and salt. Whisk until it's all combined into a smooth caramel-like sauce.\nPour this wet mix over the dry mix, and stir until coated.\nTransfer to a large lined baking tray and spread it out. Bake on the centre rack of the oven for 30 minutes, or until lightly golden, stopping stir once halfway.\nRemove from the oven and allow it to cool. It continues to harden as it cools. Add the hemp seeds and dried mango, and toss.\nWhen completely cooled, transfer the granola to a storage container. Enjoy with fruit, and yogurt or milk.",
       "meal": "BREAKFAST",
       "id": "ui76B8K"
     },
     {
-      "title": "Double Tomato Bruschetta with Balsamic Reduction",
-      "img": "https://cdn.pickuplimes.com/cache/00/d4/00d4257958e128ed7775337f46253413.jpg",
-      "ingredients": "1½cups cherry tomatoes,  \n½cup basil, \n¼cup sun-dried tomatoes in oil,\n1tsp oil from sun-dried tomatoes, \n½Tbsp capers, \n2 cloves garlic,\n1 tsp onion powder, \n¼tsp salt,\n¼tsp black pepper,\n½cup balsamic vinegar,\n1 baguette",
-      "preparation": "In a bowl, combine the chopped tomatoes, basil, sun-dried tomatoes and oil, capers, garlic, onion powder, salt, and pepper. Set aside to allow the flavours to meld.\nMake the balsamic reduction* by pouring the balsamic vinegar in a saucepan. Cook uncovered at a gentle boil until the volume reduces by about a quarter, which will take about 5 - 10 minutes.\nFor the grilled toasts, brush both sides of the bread with the sun-dried tomato oil and toast on a frying pan on high heat, or in the oven on broil, until the edges are golden.\nServe the bruschetta with the toasted bread, drizzle over a very small amount of the balsamic reduction, and enjoy!",
-      "meal": "DINNER",
-      "id": "KqQx8Ev"
-    },
-    {
       "title": "Spicy Miso Sesame Ramen",
-      "img": "https://cdn.pickuplimes.com/cache/5c/9a/5c9ad69ff4aef1643e5fcb550459cad5.jpg",
-      "ingredients": "1½Tbsp sesame paste,\n1Tbsp miso paste,\n2tsp chili bean paste,\n¼cup almond milk,\n1 shallot, \n2 cloves garlic, \n½tsp ginger,\n50g shiitake mushrooms,\n1Tbsp vegetable oil,\n2cups vegetable stock,\n4heads bok choy, \n150g tofu,\n1tsp sesame oil,\n360g udon noodles,\n½ carrot, \n½cup bean sprouts",
-      "preparation": "In a small bowl, mix the Asian sesame paste, miso paste, bean paste, and almond milk.\nFry the shallot, garlic, ginger, and shiitake in oil in sauté pan on medium-high for 5 - 7 minutes.\nAdd the stock and miso mixture to the pot. Bring to a boil, reduce to a simmer, and cook uncovered for 5 - 7 minutes.\nIn the last 30 seconds add bok choy, tofu, and sesame oil.\nMeanwhile, cook the noodles separately for 30 seconds, or according to the package instruction. Drain and add to the bowls.\nPour the soup over the noodles and garnish with desired toppings. Enjoy!",
+      "img": "assets/f.png",
+      "ingredients": "1½Tbsp sesame paste,\n1Tbsp miso paste,\n2tsp chili bean paste,\n¼cup milk,\n1 shallot, \n2 cloves garlic, \n½tsp ginger,\n50g shiitake mushrooms,\n1Tbsp vegetable oil,\n2cups vegetable stock,\n4 heads bok choy, \n150g tofu,\n1tsp sesame oil,\n360g udon noodles,\n½ carrot, \n½cup bean sprouts",
+      "preparation": "In a small bowl, mix the Asian sesame paste, miso paste, bean paste, and almond milk.\nFry the shallot, garlic, ginger, and shiitake in oil in sauté pan on medium-high for 5-7 minutes.\nAdd the stock and miso mixture to the pot. Bring to a boil, reduce to a simmer, and cook uncovered for 5-7 minutes.\nIn the last 30 seconds add bok choy, tofu, and sesame oil.\nCook the noodles separately for 30 seconds, or according to the package instruction. Drain and add to the bowls.\nPour the soup over the noodles and garnish with desired toppings. Enjoy!",
       "meal": "LUNCH",
       "id": "Ad4Ry9D"
     },
     {
-      "title": "Grilled Red Pepper Pesto Pasta",
-      "ingredients": "1 Tbsp olive oil,  \n2 red bell peppers, \n1 orange bell pepper, \n¼ tsp salt, \n⅛ tsp ground black pepper, \n4 cloves of garlic, \n1 medium zucchini, \n14.1 oz dry spaghetti pasta,\n¼ cup sun-dried tomatoes in oil, \n¼ cup roasted walnuts,\n1½ cups green peas",
-      "preparation": "Add half the oil to a large pan on high heat. When hot, add the bell peppers in a single layer and sprinkle a bit of salt and pepper over top. Cook until the skin begins to blister, and then flip to cook on the other side*.\nWhen the bell peppers are cooked through and blistered on both sides, push them to the side of the pan, add a small bit more oil, and cook the garlic until lightly golden, about 2 - 3 minutes. Transfer both the bell pepper and garlic to a food processor or blender.\nReturn the same pan to the heat, and add more oil. When hot, cook the zucchini. Sprinkle over some salt and pepper, and try not to disturb the zucchini as it cooks, and give a flip only when golden. Meanwhile, cook the pasta in a large pot of salted boiling water.\nReturning to the food processor, add in the sun-dried tomato, and walnuts. Blend until smooth, but some small chunks can remain, if desired.\nIn the last two minutes of the pasta cooking, add the peas to the cooking water. When the pasta is al dente, drain. Then return the drained pasta to the pot. Add the cooked zucchini and blended red bell pepper mixture to the pot. Toss everything to coat.\nOne heated through, serve while hot. Garnish if desired, and enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/ed/dc/eddc5a8d44cefde770f92721d523be79.jpg",
-      "meal": "DINNER",
-      "id": "osDQaDG"
-    },
-    {
-      "title": "Chickpea Omelette Sandwich",
-      "img": "https://cdn.pickuplimes.com/cache/e4/8f/e48f1f9acd75d18a5c5564727f6e1780.jpg",
-      "ingredients": "1Tbsp flaxseeds\n3Tbsp water,\n½cup flour,\n½cup soy milk,\n1Tbsp nutritional yeast flakes,\n¼tsp onion powder,\n¼tsp garlic powder,\n¼tsp kala namak,\n¼tsp salt,\n⅛tsp black pepper,\n½red bell pepper,\n1 red onion, \n1Tbsp olive oil, \n6 slices of wheat bread,\n2tsp olive oil,\n3Tbsp mayonnaise,\n1cup romaine lettuce,\n1 tomato, \n1 avocado ",
-      "preparation": "In a large bowl, mix together the ground flaxseeds and water. Set aside for 5 minutes to gel.\nThen add the chickpea flour, milk, nutritional yeast, onion powder, garlic powder, kala namak, salt, pepper, and half of the chopped bell pepper and red onions. Mix until well combined.\nHeat a large pan or skillet over medium-high heat and add some of the olive oil. Working in batches, add about two tablespoons of the omelette mixture to create a thin little omelette.\nWhen golden on the bottom, flip the omelettes over and cook on the other side. Repeat this process until you've finished the batter.\nToast the bread by brushing some olive oil on both sides of the slices. Heat a skillet over medium-high heat, and toast the bread for 2 minutes on each side, until crispy and golden.\nAssemble the sandwich by spreading some mayonnaise on each slice. Top with lettuce, the omelette, tomato slices, avocado, the remaining raw bell pepper and onions. Enjoy!",
-      "meal": "LUNCH",
-      "id": "pcg0wYv"
-    },
-    {
-      "title": "Raspberry Rose Chocolate Bark",
-      "img": "https://cdn.pickuplimes.com/cache/1d/80/1d808283c035ef7089b9a36edcc6f69e.jpg",
-      "ingredients": "3 Tbsp roasted pistachios, \n¼ cup raspberries,\n2 Tbsp coconut flakes,\n2Tbsp pineapple pieces,\n1 Tbsp dried red rose petals, \n2 tsp hemp seeds,\n400g dark chocolate",
-      "preparation": "Prepare and have at-the-ready your desired toppings: the pistachios, dried raspberries, coconut flakes, hemp seeds, candied pineapple, and rose petals. Line a baking tray with parchment paper.\nFill a saucepan one-quarter full with water, and bring to a gentle boil. Place a large heat-safe bowl on top of the pan and add the chocolate. The heat from the bowl will melt the chocolate. Stir throughout.\nOnce melted, remove the bowl from the stove (be careful as the bowl will be hot). Pour the melted chocolate onto the baking tray.\nUse the back of a rubber spatula to spread the chocolate out into a thin layer, about ½ cm thick.\nSprinkle over top all of the toppings. Then use the back of a spoon to gently press down the pieces into the chocolate. Place the chocolate bark in the fridge for at least 1 hour to harden.\nOnce solid, let slightly soften at room temperature for a minute before cutting to avoid it snapping in other places. Cut into your desired shapes and sizes. Enjoy!",
-      "meal": "DESSERTS",
-      "id": "ExeT-nL"
-    },
-    {
-      "title": "Tea-Infused Chocolate Mousse",
-      "ingredients": "1 cup aquafaba,\n2 bags flavored tea,\n175 g dairy-free dark chocolate,\nlemon zest,\npomegranate seeds",
-      "preparation": "Add the aquafaba and tea bags* to a saucepan over medium-high heat. Remove the pan from the heat just before it starts to simmer.\nMake sure your bowl and electric hand mixer are grease-free. Transfer the liquid and tea bags to a large bowl to cool. When cooled, remove the tea bags.\nMelt the chocolate using a microwave or on the stove, using a double boiler. Let the chocolate cool off a bit.\nBeat the cooled aquafaba until stiff peaks are formed, this should take around 6 - 8 minutes.\nIn a slow and steady stream, add the melted chocolate to the aquafaba, carefully folding with a rubber spatula. Be careful not to over-mix, as the mousse can lose its air.\nScoop the mixture into some glass jars and refrigerate for at least 1 hour or overnight.\nWhen ready to serve, top with your desired garnish, and enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/bd/68/bd68f809a423a0767a4297f9b152e19a.jpg",
-      "meal": "DESSERTS",
-      "id": "1yUHdNf"
-    },
-    {
       "title": "Coconut Whip",
-      "ingredients": "1⅓ cups coconut cream,\n2 Tbsp powdered sugar,\n1 tsp pure vanilla extract ",
-      "preparation": "Place the coconut milk can upside-down in the refrigerator for at least 5 hours, but best if left in the fridge overnight to allow the liquid to separate from the fat. Refrigerate a large bowl together with the whisks of your electric hand mixer for at least 10 minutes to cool.\nGently turn the can back right-side-up, and open the can. Pour out the liquid layer on the top, and save this for a future smoothie or curry. Using a spoon, scoop out the solid white coconut fat into a large bowl.\nWhip the coconut cream for 3 - 4 minutes.\nThen add in the icing sugar and vanilla, and whip again for an additional minute.\nUse the coconut whip to top brownies, fruit crumbles, watermelon pizza, or as a topping on your favorite hot chocolate.",
-      "img": "https://cdn.pickuplimes.com/cache/42/22/4222a837af9ec2b7f7aa025e0bcee5e7.jpg",
+      "ingredients": "1⅓cups coconut cream,\n2Tbsp powdered sugar,\n1tsp vanilla extract ",
+      "preparation": "Place the coconut milk can upside-down in the refrigerator for at least 5 hours, but best if left in the fridge overnight to allow the liquid to separate from the fat. Refrigerate a large bowl together with the whisks of your electric hand mixer for at least 10 minutes to cool.\nGently turn the can back right-side-up, and open the can. Pour out the liquid layer on the top, and save this for a future smoothie or curry. Using a spoon, scoop out the solid white coconut fat into a large bowl.\nWhip the coconut cream for 3-4 minutes.\nThen add in the icing sugar and vanilla, and whip again for an additional minute.\nUse the coconut whip to top brownies, fruit crumbles, watermelon pizza, or as a topping on your favorite hot chocolate.",
+      "img": "assets/g.png",
       "meal": "DESSERTS",
       "id": "qKIL6v6"
     }
