@@ -2,8 +2,10 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { tap } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { DeleteDialogComponent } from '../../delete-dialog/delete-dialog.component';
 import { Recipe } from '../../interfaces/recipe.model';
 import { RecipesStore } from '../../services/recipes.store';
+
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 @Component({
@@ -17,14 +19,14 @@ export class RecipeCardListComponent implements OnInit {
   @Output()
   private recipesChanged = new EventEmitter();
   
-  constructor(public dialog: MatDialog,  private recipesStore: RecipesStore,) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   editRecipe(recipe: Recipe){
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    
     dialogConfig.autoFocus = true;
     dialogConfig.width = "400px";
 
@@ -39,8 +41,11 @@ export class RecipeCardListComponent implements OnInit {
   }
 
   deleteRecipeCard(recipe: Recipe){
-    this.recipesStore.deleteRecipe(recipe.id!).subscribe();
-    this.recipesStore.loadAllRecipes()
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "400px";
+
+    dialogConfig.data = recipe;
+    const dialogRef = this.dialog.open(DeleteDialogComponent, dialogConfig); 
   }
-  
 }

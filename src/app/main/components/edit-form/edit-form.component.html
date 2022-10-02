@@ -1,6 +1,7 @@
 
 <form class="card__form" [formGroup]="editForm">
-    <div>
+    <div class="card__form-scroll"></div>
+    <div class="card__form-overflow">
         <mat-form-field class="card__form-field" appearance="fill">
             <mat-label>Title</mat-label>
             <input type="text" formControlName="title" placeholder="Ex. Title" matInput required>
@@ -38,11 +39,11 @@
             <mat-error>Meal type is required</mat-error>
         </mat-form-field>
     </div>
-    <mat-dialog-actions class="button">
-        <button class="mat-raised-button" (click)="close()">
+    <div mat-dialog-actions class="card__form-btn">
+        <button mat-raised-button (click)="close()">
             Close
         </button>
-        <button type="button" (click)="editRecipeCard()" [disabled]="editForm.invalid" mat-raised-button
+        <button (click)="editRecipeCard()" [disabled]="editForm.invalid" mat-raised-button
             color="accent">Update</button>
-    </mat-dialog-actions>
+    </div>
 </form>

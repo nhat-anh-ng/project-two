@@ -1,68 +1,84 @@
 {
   "foodapp": [
     {
-      "title": "hello",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "ingredients": "elo 1 cupe, 2 spoons, 3 tbs",
-      "preparation": "abcdefg",
-      "meal": "BREAKFAST",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "LUNCH"
-    },
-    {
-      "id": "2",
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "LUNCH"
-    },
-    {
-      "id": "3",
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "DINNER"
-    },
-    {
-      "id": "2",
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "DESSERTS"
-    },
-    {
-      "id": "3",
-      "title": "title",
-      "ingredients": "1 cupe, 2 spoons, 3 tbs",
-      "img": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
-      "preparation": "abcdefg",
-      "meal": "DRINKS"
-    },
-    {
-      "title": "Blackberry Ginger Iced Green Tea",
-      "img": "https://cdn.pickuplimes.com/cache/b9/ba/b9bad96fddd08d52ed85e72090833764.jpg",
-      "ingredients": "4 green tea bags, \n4 cups hot water,\n2 cups fresh blackberries,\n¾ cup frozen pineapple chunks,\n½ lime, juiced,\n1 Tbsp fresh ginger,\n1 Tbsp maple syrup, \n¼ cup fresh mint leaves,\n½ lime, sliced, ice cubes",
-      "preparation": "Add the green tea to the hot water and let it steep until it cools down completely. To a blender, add the blackberries, frozen pineapple, lime, ginger, and maple syrup. Blend until smooth. Strain the blended blackberry mixture through a sieve to remove the seeds. To assemble, first divide the puréed blackberry mixture between the glasses, followed by mint, lime slice cubes, and finish with the cooled green tea.\nStir and add more sweetener to taste. Garnish and enjoy!",
+      "title": "Blackberry Ginger Iced Tea",
+      "img": "assets/j.png",
+      "ingredients": "4 green tea bags, \n4 cups hot water,\n2cups blackberries,\n¾ cup pineapple,\n½ lime,\n1Tbsp ginger,\n1 Tbsp maple syrup, \n¼ cup mint leaves,\n½ lime, ice cubes",
+      "preparation": "Add the green tea to the hot water and let it steep until it cools down completely. To a blender, add the blackberries, frozen pineapple, lime, ginger, and maple syrup. Blend until smooth. Strain the blended blackberry mixture through a sieve. Divide the puréed blackberry mixture between the glasses, followed by mint, lime slice cubes, and finish with the cooled green tea.\nStir and add more sweetener to taste. Garnish and enjoy!",
       "meal": "DRINKS",
       "id": "eKe0l84"
     },
     {
       "title": "Mango Turmeric Lassi",
-      "ingredients": "2 soft Medjool dates, pits removed, \n2½ cups frozen mango chunks, \n2 cups unsweetened soy yogurt, \n¾ cup unsweetened soy milk,\n½ Tbsp fresh ginger,\n½ tsp ground turmeric,\n1 pinch of ground black pepper,\n¼ lemon, juiced",
+      "img": "assets/d.png",
+      "ingredients": "2 soft Medjool dates, \n2½cups mango, \n2 cups yogurt, \n¾ cup milk,\n½ Tbsp ginger,\n½ tsp turmeric,\n1 pinch of black pepper,\n¼ lemon",
       "preparation": "Add all the ingredients to a blender and blend until smooth.\nPour into glasses and enjoy!",
-      "img": "https://cdn.pickuplimes.com/cache/e8/a3/e8a3d782482e2fe540b6340d7e20cce9.jpg",
       "meal": "DRINKS",
       "id": "DBZw35K"
+    },
+    {
+      "title": "Brown Sugar Matcha Bubble Tea",
+      "img": "assets/t.png",
+      "ingredients": "2 Tbsp brown sugar,\n2 Tbsp boiling water,\n½ cup tapioca pearls,\n2 tsp matcha powder,\n½ cup hot water, \n1 tsp pure vanilla extract\n1cup ice cubes\n2½ cups milk",
+      "preparation": "Add the brown sugar and boiling water to a bowl. Stir until the sugar has dissolved.\nIn a saucepan, cook the tapioca pearls for 5 minutes.\nDrain the tapioca pearls, rinse under cold water, and transfer to the brown sugar syrup jar. Give it a mix.\nSift the matcha powder into a bowl. Add the hot water. Whisk until there’s a foam layer on top of the matcha.\nAdd the vanilla extract to the matcha mixture and whisk again until combined.\nDivide the brown sugar pearls between the glasses, top with the ice cubes, milk, and the matcha. Enjoy!",
+      "meal": "DRINKS",
+      "id": "K3khfx8"
+    },
+    {
+      "title": "High Protein Pancakes",
+      "img": "assets/c.png",
+      "ingredients": "300g tofu,\n1½cups milk, \n2Tbsp maple syrup,\n2tsp vanilla extract,\n2tsp lemon juice,\n3½cups flour, \n2tsp baking powder,\n1tsp baking soda,\n1tsp cinnamon,\n¼tsp salt,\n1Tbsp vegetable oil,\n1cup yogurt,\n1cup mixed fresh berries",
+      "preparation": "To a blender, add the tofu, pea milk, maple syrup, vanilla, and lemon juice. Blend until smooth.\nTo a large bowl, add the spelt flour, baking powder, baking soda, cinnamon, and salt. Mix well. Add the wet ingredients from the blender. Mix until just combined, but be careful not to over-mix. If the mixture is too thick, add a splash of plant milk to thin it out a touch.\nHeat a non-stick crêpe pan on medium-high heat and use a bit of oil to lightly grease the pan. Use a ¼ measuring cup to pour the batter onto the pan. Cook for 2 minutes on each side, or until golden. Continue with the leftover batter.\nTop with yogurt, nuts, berries, and maple syrup, and enjoy.",
+      "meal": "BREAKFAST",
+      "id": "M_2MgLB"
+    },
+    {
+      "title": "Oatmeal with Caramelized Pear",
+      "ingredients": "1cup oats \n2cups milk \n1tsp cinnamon,\n½tsp ginger,\n¼tsp cloves,\n⅛tsp allspice,\n2Tbsp flaxseeds,\n2tsp maple syrup,\n1tsp blackstrap molasses,\n1 pear, \n2tsp maple syrup ",
+      "preparation": "To a saucepan, add the oats, milk, cinnamon, ginger, cloves, and allspice. Bring to a gentle boil, then reduce to a simmer for 5 minutes, stirring occasionally.\nTo a medium pan on medium-high heat, add the sliced pear and the maple syrup. Let the pear caramelize for about 4 minutes while stirring and flipping the pear slices occasionally. Take off the heat.\nTo the saucepan of oatmeal, add the flaxseeds, maple syrup, and molasses and let it cook for another 1 - 2 minutes. Add more milk if you prefer a thinner consistency.\nDivide the oatmeal, caramelized pear, yogurt, and pecans between the bowls. Enjoy!",
+      "img": "assets/p.png",
+      "meal": "BREAKFAST",
+      "id": "2ZghhVh"
+    },
+    {
+      "title": "Raspberry Lemonade Smoothie Bowl",
+      "img": "assets/s.png",
+      "ingredients": "1½cups raspberries,\n1 banana,\n1 lemon, \n½cup yogurt,\n½cup cashews,\n¼cup milk,\n1Tbsp agave syrup,\nfresh fruit,\nhemp seeds,\nlemon zest,\nvegan granola",
+      "preparation": "Add all ingredients to a high-speed blender and blend until smooth.\nTaste test. The raspberries are tart and the lemon is sour. If you feel it's needed, add more syrup to cut through the tartness.\nDivide into bowls and add desired toppings. Enjoy!",
+      "meal": "BREAKFAST",
+      "id": "ick9yme"
+    },
+    {
+      "title": "Breakfast Waffles",
+      "img": "assets/a.png",
+      "ingredients": "1½cups milk,\n1Tbsp apple cider vinegar,\n2cups flour,\n⅓cup applesauce,\n2tsp baking powder,\n1tsp cinnamon,\n1tsp vanilla extract,\n½tsp salt",
+      "preparation": "To a large bowl, add the milk and vinegar, mix, and let this rest for 5 minutes. Milk will start to slightly curdle.\nHeat the waffle maker. Returning to the bowl, add the flour, applesauce, baking powder, cinnamon, vanilla, and salt, then mix until just combined.\nBrush the waffle pan with some oil. Add a few spoonfuls of the waffle batter until the element is filled near to the top. Gently close the lid, and let it cook for 4-5 minutes, or until golden. Repeat this with the remaining batter.\nAdd toppings to your waffles, and enjoy!",
+      "meal": "BREAKFAST",
+      "id": "LDx37Ya"
+    },
+    {
+      "title": "Crunchy Almond & Mango Granola",
+      "img": "assets/b.png",
+      "ingredients": "2½cups oats,\n1cup quinoa, \n½cup almonds,\n½cup shredded coconut,\n½cup pumpkin seeds, \n¼cup sugar,\n½tsp cinnamon,\n¼cup vegetable oil,\n¼cup maple syrup,\n¼cup almond butter,\n1tsp vanilla extract,\n¾tsp salt,\n2Tbsp hemp seeds,\n½cup dried mango",
+      "preparation": "Preheat the oven to 160°C. To a large bowl, add the oats, puffed quinoa, almonds, coconut, pumpkin seeds, brown sugar, and cinnamon, and give it a stir.\nTo a separate medium bowl, add the oil, syrup, almond butter, vanilla, and salt. Whisk until it's all combined into a smooth caramel-like sauce.\nPour this wet mix over the dry mix, and stir until coated.\nTransfer to a large lined baking tray and spread it out. Bake on the centre rack of the oven for 30 minutes, or until lightly golden, stopping stir once halfway.\nRemove from the oven and allow it to cool. It continues to harden as it cools. Add the hemp seeds and dried mango, and toss.\nWhen completely cooled, transfer the granola to a storage container. Enjoy with fruit, and yogurt or milk.",
+      "meal": "BREAKFAST",
+      "id": "ui76B8K"
+    },
+    {
+      "title": "Spicy Miso Sesame Ramen",
+      "img": "assets/f.png",
+      "ingredients": "1½Tbsp sesame paste,\n1Tbsp miso paste,\n2tsp chili bean paste,\n¼cup milk,\n1 shallot, \n2 cloves garlic, \n½tsp ginger,\n50g shiitake mushrooms,\n1Tbsp vegetable oil,\n2cups vegetable stock,\n4 heads bok choy, \n150g tofu,\n1tsp sesame oil,\n360g udon noodles,\n½ carrot, \n½cup bean sprouts",
+      "preparation": "In a small bowl, mix the Asian sesame paste, miso paste, bean paste, and almond milk.\nFry the shallot, garlic, ginger, and shiitake in oil in sauté pan on medium-high for 5-7 minutes.\nAdd the stock and miso mixture to the pot. Bring to a boil, reduce to a simmer, and cook uncovered for 5-7 minutes.\nIn the last 30 seconds add bok choy, tofu, and sesame oil.\nCook the noodles separately for 30 seconds, or according to the package instruction. Drain and add to the bowls.\nPour the soup over the noodles and garnish with desired toppings. Enjoy!",
+      "meal": "LUNCH",
+      "id": "Ad4Ry9D"
+    },
+    {
+      "title": "Coconut Whip",
+      "ingredients": "1⅓cups coconut cream,\n2Tbsp powdered sugar,\n1tsp vanilla extract ",
+      "preparation": "Place the coconut milk can upside-down in the refrigerator for at least 5 hours, but best if left in the fridge overnight to allow the liquid to separate from the fat. Refrigerate a large bowl together with the whisks of your electric hand mixer for at least 10 minutes to cool.\nGently turn the can back right-side-up, and open the can. Pour out the liquid layer on the top, and save this for a future smoothie or curry. Using a spoon, scoop out the solid white coconut fat into a large bowl.\nWhip the coconut cream for 3-4 minutes.\nThen add in the icing sugar and vanilla, and whip again for an additional minute.\nUse the coconut whip to top brownies, fruit crumbles, watermelon pizza, or as a topping on your favorite hot chocolate.",
+      "img": "assets/g.png",
+      "meal": "DESSERTS",
+      "id": "qKIL6v6"
     }
   ]
 }

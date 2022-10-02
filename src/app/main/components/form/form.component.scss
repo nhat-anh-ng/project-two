@@ -1,18 +1,13 @@
-.card {
-    margin: 0 auto;
-    &__alert {
-        background-color: rgba(0, 128, 0, 0.669);
-        color: white;
-        margin-bottom: 1rem;
-    }
 
+.card {
     &__form {
-        width: 30rem;
+        width: 50%;
+        margin: 0 auto;
         &-title {
+            margin-top: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: "Fraunces", serif;
         }
 
         &-field {
@@ -20,14 +15,27 @@
         }
 
         &-btn {
+            margin-bottom: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            button{
+                width: 10rem;
+            }
+              
+            
         }
+
+                &-alert {
+                    background-color: rgba(0, 128, 0, 0.669);
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-text{
+                        margin-block-end: 0rem;
+                    }
+                }
     }
 }
 
-.margin,
-mat-card {
-    margin-top: 5rem;
-}

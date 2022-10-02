@@ -1,42 +1,59 @@
 
-
-        <mat-tab-group mat-align-tabs="center">
-        <mat-tab label="Breakfast">
-            
-        <app-recipe-card-list  [recipes]="breakfastRecipes$ | async"></app-recipe-card-list>
-       <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        <mat-tab label="Lunch">
-            <app-recipe-card-list [recipes]="lunchRecipes$ | async"></app-recipe-card-list>
-            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        <mat-tab label="Dinner">
-            <app-recipe-card-list [recipes]="dinnerRecipes$ | async"></app-recipe-card-list>
-            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        <mat-tab label="Desserts">
-            <app-recipe-card-list [recipes]="dessertsRecipes$ | async"></app-recipe-card-list>
-            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        <mat-tab label="Drinks">
-            <app-recipe-card-list [recipes]="drinksRecipes$ | async"></app-recipe-card-list>
-            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <mat-icon>add_circle</mat-icon>
-                Add recipe
-            </ng-template>
-            <app-form></app-form>
-        </mat-tab>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <mat-icon>search</mat-icon>
-                Search
-            </ng-template>
-            <app-search></app-search>
-            <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
-        </mat-tab>
-        
+     <mat-tab-group color="primary" mat-align-tabs="center">
+            <mat-tab label="Breakfast">
+                <app-recipe-card-list  [recipes]="breakfastRecipes$ | async"></app-recipe-card-list>
+                <div class="oops" *ngIf='!(breakfastRecipes$ | async)?.length'>
+                    <h1>Oooups there are no recipes!</h1>
+                    <app-form></app-form>
+                </div>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
+            <mat-tab label="Lunch">
+                <app-recipe-card-list [recipes]="lunchRecipes$ | async"></app-recipe-card-list>
+                <div class="oops" *ngIf='!(lunchRecipes$ | async)?.length'>
+                    <h1>Oooups there are no recipes!</h1>
+                    <app-form></app-form>
+                </div>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
+            <mat-tab label="Dinner">
+                
+                <app-recipe-card-list [recipes]="dinnerRecipes$ | async" ></app-recipe-card-list>
+                <div class="oops" *ngIf='!(dinnerRecipes$ | async)?.length'> <h1>Oooups there are no recipes!</h1> 
+                    <app-form></app-form>
+                </div>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
+            <mat-tab label="Desserts">
+                <app-recipe-card-list [recipes]="dessertsRecipes$ | async"></app-recipe-card-list>
+                <div class="oops" *ngIf='!(dessertsRecipes$ | async)?.length'>
+                    <h1>Oooups there are no recipes!</h1>
+                    <app-form></app-form>
+                </div>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
+            <mat-tab label="Drinks">
+                <app-recipe-card-list [recipes]="drinksRecipes$ | async"></app-recipe-card-list>
+                <div class="oops" *ngIf='!(drinksRecipes$ | async)?.length'>
+                    <h1>Oooups there are no recipes!</h1>
+                    <app-form></app-form>
+                </div>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>add_circle</mat-icon>
+                    Add recipe
+                </ng-template>
+                <app-form></app-form>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>search</mat-icon>
+                    Search
+                </ng-template>
+                <app-search></app-search>
+                <app-scroll (scrollToTopEvent)="scrollToTopMsg($event)"></app-scroll>
+            </mat-tab>
         </mat-tab-group>
 

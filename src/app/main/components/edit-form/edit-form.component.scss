@@ -1,0 +1,32 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.card {
+    margin: 0 auto;
+
+    &__alert {
+        background-color: rgba(0, 128, 0, 0.669);
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        width: 22rem;
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Fraunces", serif;
+        }
+
+        &-field {
+            width: 100%;
+        }
+
+        
+    }
+}

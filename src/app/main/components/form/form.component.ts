@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   recipe!: Recipe;
   recipeForm!: FormGroup;
   recipeObj: Recipe = new Recipe();
+  showMessage = false;
   
   constructor(private fb: FormBuilder, private recipesStore: RecipesStore) {
     
@@ -21,7 +22,7 @@ export class FormComponent implements OnInit {
     ingredients: new FormControl('', [Validators.required]),
     preparation: new FormControl('', [Validators.required]),
     img: new FormControl('' ),
-    meal: new FormControl('LUNCH', [Validators.required]),
+    meal: new FormControl('', [Validators.required]),
     })
   }
 
@@ -37,6 +38,13 @@ export class FormComponent implements OnInit {
     this.recipeObj.meal = this.recipeForm.value.meal;
     
     this.recipesStore.saveRecipe(this.recipeObj).subscribe();
+    this.recipesStore.loadAllRecipes();
+    this.showMessage = true
+    this.recipeForm.reset();
+  }
+
+  onClose() {
+    this.showMessage = false;
     this.recipesStore.loadAllRecipes();
   }
 }

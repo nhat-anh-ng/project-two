@@ -1,4 +1,19 @@
-.recipes__card{
-    width: 400px;
-    margin: 1rem;
+.recipes {
+    columns: 3;
+    gap: 1rem;
+    &__card{
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+        
+}
+
+@media screen and (max-width: 1100px) {
+    .recipes {
+        columns: 1;
+        &__img{
+                width: 8rem;
+                height: 8rem;
+            }
+    }
 }
